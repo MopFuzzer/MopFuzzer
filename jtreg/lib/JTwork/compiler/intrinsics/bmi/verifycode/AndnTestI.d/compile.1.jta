@@ -1,0 +1,11 @@
+--add-modules
+java.base,java.management
+--add-exports
+java.base/jdk.internal.misc=ALL-UNNAMED
+-d
+D:\repository\jtreg\build\images\jtreg\lib\JTwork\classes\test\lib
+-sourcepath
+D:\repository\jdk11u\test\lib;D:\repository\jdk11u\test\hotspot\jtreg
+-classpath
+D:\repository\jtreg\build\images\jtreg\lib\JTwork\classes\test\lib;D:\repository\jtreg\build\images\jtreg\lib\JTwork\classes
+D:\repository\jdk11u\test\lib\ClassFileInstaller.java

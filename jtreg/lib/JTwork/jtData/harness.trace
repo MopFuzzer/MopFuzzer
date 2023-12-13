@@ -1,0 +1,13 @@
+# Trace file started at 2023-06-08T14:55:36+0800
+# JT Harness version 6.0
+# class directory: D:\repository\jtreg\build\images\jtreg\lib\javatest.jar
+# using java: D:\java_tools\jdk-11.0.18
+2023-06-08T14:55:36+0800 Starting tests.
+Test suite class: com.sun.javatest.regtest.config.RegressionTestSuite
+Test finder class: com.sun.javatest.regtest.config.RegressionTestFinder
+2023-06-08T14:55:36+0800 Starting: compiler/intrinsics/bmi/verifycode/AndnTestI.java
+2023-06-08T14:55:47+0800 Finished: (10 seconds) compiler/intrinsics/bmi/verifycode/AndnTestI.java: Passed. Execution successful
+Below are the 1 slowest tests: 
+10 seconds: compiler/intrinsics/bmi/verifycode/AndnTestI.java
+2023-06-08T14:55:47+0800 Doing post-run cleanup
+2023-06-08T14:55:47+0800 Completed: All tests passed

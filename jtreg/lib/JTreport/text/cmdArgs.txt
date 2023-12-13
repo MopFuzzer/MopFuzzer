@@ -1,0 +1,2 @@
+-jdk:D:/repository/jdk11u/build/windows-x86_64-normal-server-fastdebug/images/jdk
+D:\repository\jdk11u\test\hotspot\jtreg\compiler\intrinsics\bmi\verifycode\AndnTestI.java

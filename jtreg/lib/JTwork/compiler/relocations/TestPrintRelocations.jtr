@@ -1,0 +1,1017 @@
+#Test Results (version 2)
+#Thu Jun 08 14:52:58 CST 2023
+#-----testdescription-----
+$file=D\:\\repository\\jdk11u\\test\\hotspot\\jtreg\\compiler\\relocations\\TestPrintRelocations.java
+$root=D\:\\repository\\jdk11u\\test\\hotspot\\jtreg
+keywords=bug8044538 othervm
+run=USER_SPECIFIED main/othervm -XX\:+IgnoreUnrecognizedVMOptions -Xcomp -XX\:CompileCommand\=compileonly,java.lang.String*\:\:* -XX\:+PrintRelocations compiler.relocations.TestPrintRelocations\r\n
+source=TestPrintRelocations.java
+title=assert hit while printing relocations for jump table entries
+
+#-----environment-----
+
+#-----testresult-----
+description=file\:/D\:/repository/jdk11u/test/hotspot/jtreg/compiler/relocations/TestPrintRelocations.java
+elapsed=906 0\:00\:00.906
+end=Thu Jun 08 14\:52\:58 CST 2023
+environment=regtest
+execStatus=Passed. Execution successful
+harnessLoaderMode=Classpath Loader
+harnessVariety=Full Bundle
+hostname=xzffff-XiaoXinPro16
+javatestOS=Windows 11 10.0 (amd64)
+javatestVersion=6.0-ea+b24-2023-06-07-${BUILT_FROM_COMMIT}
+jtregVersion=jtreg 7.3 dev 0
+script=com.sun.javatest.regtest.exec.RegressionScript
+sections=script_messages build main
+start=Thu Jun 08 14\:52\:57 CST 2023
+test=compiler/relocations/TestPrintRelocations.java
+testJDK=D\:\\repository\\jdk11u\\build\\windows-x86_64-normal-server-fastdebug\\images\\jdk
+testJDK_OS=[name\:Windows 11,arch\:amd64,version\:10.0,family\:windows,simple_arch\:x64,simple_version\:10.0,processors\:16,maxMemory\:14894297088,maxSwap\:24557973504]
+testJDK_os.arch=amd64
+testJDK_os.name=Windows 11
+testJDK_os.version=10.0
+totalTime=911
+user.name=xzf
+work=D\:\\repository\\jtreg\\build\\images\\jtreg\\lib\\JTwork\\compiler\\relocations
+
+#section:script_messages
+----------messages:(4/320)*----------
+JDK under test: D:\\repository\\jdk11u\\build\\windows-x86_64-normal-server-fastdebug\\images\\jdk
+openjdk version "11.0.20-internal" 2023-07-18
+OpenJDK Runtime Environment (fastdebug build 11.0.20-internal+0-adhoc.xzf.jdk11u)
+OpenJDK 64-Bit Server VM (fastdebug build 11.0.20-internal+0-adhoc.xzf.jdk11u, mixed mode)
+
+#section:build
+----------messages:(5/208)----------
+command: build compiler.relocations.TestPrintRelocations
+reason: Named class compiled on demand
+started: Thu Jun 08 14:52:57 CST 2023
+finished: Thu Jun 08 14:52:57 CST 2023
+elapsed time (seconds): 0.005
+result: Passed. All files up to date
+
+#section:main
+----------messages:(6/523)----------
+command: main -XX:+IgnoreUnrecognizedVMOptions -Xcomp -XX:CompileCommand=compileonly,java.lang.String*::* -XX:+PrintRelocations compiler.relocations.TestPrintRelocations
+reason: User specified action: run main/othervm -XX:+IgnoreUnrecognizedVMOptions -Xcomp -XX:CompileCommand=compileonly,java.lang.String*::* -XX:+PrintRelocations compiler.relocations.TestPrintRelocations 
+started: Thu Jun 08 14:52:57 CST 2023
+Mode: othervm [/othervm specified]
+finished: Thu Jun 08 14:52:58 CST 2023
+elapsed time (seconds): 0.665
+----------configuration:(0/0)----------
+----------System.out:(920/81822)----------
+CompileCommand: compileonly java/lang/String*.*
+Compiled method (c1)      93    1       3       java.lang.StringLatin1::hashCode (42 bytes)
+ total in heap  [0x000002a89d420010,0x000002a89d420510] = 1280
+ relocation     [0x000002a89d420198,0x000002a89d4201d8] = 64
+ main code      [0x000002a89d4201e0,0x000002a89d420360] = 384
+ stub code      [0x000002a89d420360,0x000002a89d4203c0] = 96
+ metadata       [0x000002a89d4203c0,0x000002a89d4203c8] = 8
+ scopes data    [0x000002a89d4203c8,0x000002a89d420428] = 96
+ scopes pcs     [0x000002a89d420428,0x000002a89d4204f8] = 208
+ dependencies   [0x000002a89d4204f8,0x000002a89d420500] = 8
+ nul chk table  [0x000002a89d420500,0x000002a89d420510] = 16
+relocations:
+         @0x000002a89d420198: c00c
+relocInfo@0x000002a89d420198 [type=12(metadata) addr=0x000002a89d4201ec offset=12] | [metadata_addr=0x000002a89d4201ee *=0x000002a8b7cb82c0 offset=0]metadata_value=0x000002a8b7cb82c0: method data for {method} {0x000002a8b7bd9768} 'hashCode' '([B)I' in 'java/lang/StringLatin1'
+         @0x000002a89d42019a: c04e
+relocInfo@0x000002a89d42019a [type=12(metadata) addr=0x000002a89d42023a offset=78] | [metadata_addr=0x000002a89d42023c *=0x000002a8b7cb82c0 offset=0]metadata_value=0x000002a8b7cb82c0: method data for {method} {0x000002a8b7bd9768} 'hashCode' '([B)I' in 'java/lang/StringLatin1'
+         @0x000002a89d42019c: a02f
+relocInfo@0x000002a89d42019c [type=10(poll) addr=0x000002a89d420269 offset=47]
+         @0x000002a89d42019e: c003
+relocInfo@0x000002a89d42019e [type=12(metadata) addr=0x000002a89d42026c offset=3] | [metadata_addr=0x000002a89d42026e *=0x000002a8b7cb82c0 offset=0]metadata_value=0x000002a8b7cb82c0: method data for {method} {0x000002a8b7bd9768} 'hashCode' '([B)I' in 'java/lang/StringLatin1'
+         @0x000002a89d4201a0: c012
+relocInfo@0x000002a89d4201a0 [type=12(metadata) addr=0x000002a89d42027e offset=18] | [metadata_addr=0x000002a89d420280 *=0x000002a8b7cb82c0 offset=0]metadata_value=0x000002a8b7cb82c0: method data for {method} {0x000002a8b7bd9768} 'hashCode' '([B)I' in 'java/lang/StringLatin1'
+         @0x000002a89d4201a2: b045
+relocInfo@0x000002a89d4201a2 [type=11(poll_return) addr=0x000002a89d4202c3 offset=69]
+         @0x000002a89d4201a4: c004
+relocInfo@0x000002a89d4201a4 [type=12(metadata) addr=0x000002a89d4202c7 offset=4] | [metadata_addr=0x000002a89d4202c9 *=0x000002a8b7bd9760 offset=0]metadata_value=0x000002a8b7bd9760: {method} {0x000002a8b7bd9768} 'hashCode' '([B)I' in 'java/lang/StringLatin1'
+         @0x000002a89d4201a6: 6417
+relocInfo@0x000002a89d4201a6 [type=6(runtime_call) addr=0x000002a89d4202de offset=23 format=1] | [destination=0x000002a89cd1e740]
+         @0x000002a89d4201a8: 640a
+relocInfo@0x000002a89d4201a8 [type=6(runtime_call) addr=0x000002a89d4202e8 offset=10 format=1] | [destination=0x000002a89cd24d40]
+         @0x000002a89d4201aa: f803c9f5e0807ffb7005
+relocInfo@0x000002a89d4201b2 [type=7(external_word) addr=0x000002a89d4202ed offset=5 data={c9f5e0807ffb}] | [target=0x00007ffbc9f5e080]
+         @0x000002a89d4201b4: 600e
+relocInfo@0x000002a89d4201b4 [type=6(runtime_call) addr=0x000002a89d4202fb offset=14] | [destination=0x00007ffbc9b04f60]
+         @0x000002a89d4201b6: c00e
+relocInfo@0x000002a89d4201b6 [type=12(metadata) addr=0x000002a89d420309 offset=14] | [metadata_addr=0x000002a89d42030b *=0x000002a8b7bd9760 offset=0]metadata_value=0x000002a8b7bd9760: {method} {0x000002a8b7bd9768} 'hashCode' '([B)I' in 'java/lang/StringLatin1'
+         @0x000002a89d4201b8: 6417
+relocInfo@0x000002a89d4201b8 [type=6(runtime_call) addr=0x000002a89d420320 offset=23 format=1] | [destination=0x000002a89cd1e740]
+         @0x000002a89d4201ba: 643a
+relocInfo@0x000002a89d4201ba [type=6(runtime_call) addr=0x000002a89d42035a offset=58 format=1] | [destination=0x000002a89cd26040]
+         @0x000002a89d4201bc: 0006
+relocInfo@0x000002a89d4201bc [type=0(none) addr=0x000002a89d420360 offset=6]
+         @0x000002a89d4201be: 6428
+relocInfo@0x000002a89d4201be [type=6(runtime_call) addr=0x000002a89d420388 offset=40 format=1] | [destination=0x000002a89cd22640]
+         @0x000002a89d4201c0: f803c9f5e0807ffb7005
+relocInfo@0x000002a89d4201c8 [type=7(external_word) addr=0x000002a89d42038d offset=5 data={c9f5e0807ffb}] | [target=0x00007ffbc9f5e080]
+         @0x000002a89d4201ca: 600e
+relocInfo@0x000002a89d4201ca [type=6(runtime_call) addr=0x000002a89d42039b offset=14] | [destination=0x00007ffbc9b04f60]
+         @0x000002a89d4201cc: f801fede900e
+relocInfo@0x000002a89d4201d0 [type=9(section_word) addr=0x000002a89d4203a9 offset=14 data=-290] | [target=0x000002a89d4203a9]
+         @0x000002a89d4201d2: 640c
+relocInfo@0x000002a89d4201d2 [type=6(runtime_call) addr=0x000002a89d4203b5 offset=12 format=1] | [destination=0x000002a89cdf3440]
+         @0x000002a89d4201d4: 0000
+relocInfo@0x000002a89d4201d4 [type=0(none) addr=0x000002a89d4203b5 offset=0]
+         @0x000002a89d4201d6: 0000
+relocInfo@0x000002a89d4201d6 [type=0(none) addr=0x000002a89d4203b5 offset=0]
+         @0x000002a89d4201d8: 
+Compiled method (c1)      94    2       3       java.lang.String::length (11 bytes)
+ total in heap  [0x000002a89d420590,0x000002a89d420aa8] = 1304
+ relocation     [0x000002a89d420718,0x000002a89d420770] = 88
+ main code      [0x000002a89d420780,0x000002a89d420920] = 416
+ stub code      [0x000002a89d420920,0x000002a89d420980] = 96
+ metadata       [0x000002a89d420980,0x000002a89d420990] = 16
+ scopes data    [0x000002a89d420990,0x000002a89d4209e0] = 80
+ scopes pcs     [0x000002a89d4209e0,0x000002a89d420a90] = 176
+ dependencies   [0x000002a89d420a90,0x000002a89d420a98] = 8
+ nul chk table  [0x000002a89d420a98,0x000002a89d420aa8] = 16
+relocations:
+         @0x000002a89d420718: 6017
+relocInfo@0x000002a89d420718 [type=6(runtime_call) addr=0x000002a89d420797 offset=23] | [destination=0x000002a89cdf4420]
+         @0x000002a89d42071a: c015
+relocInfo@0x000002a89d42071a [type=12(metadata) addr=0x000002a89d4207ac offset=21] | [metadata_addr=0x000002a89d4207ae *=0x000002a8b7cb8540 offset=0]metadata_value=0x000002a8b7cb8540: method data for {method} {0x000002a8b7a755e0} 'length' '()I' in 'java/lang/String'
+         @0x000002a89d42071c: f803ca3b49407ffb7023
+relocInfo@0x000002a89d420724 [type=7(external_word) addr=0x000002a89d4207cf offset=35 data={ca3b49407ffb}] | [target=0x00007ffbca3b4940]
+         @0x000002a89d420726: f803ca0a84287ffb7013
+relocInfo@0x000002a89d42072e [type=7(external_word) addr=0x000002a89d4207e2 offset=19 data={ca0a84287ffb}] | [target=0x00007ffbca0a8428]
+         @0x000002a89d420730: 600e
+relocInfo@0x000002a89d420730 [type=6(runtime_call) addr=0x000002a89d4207f0 offset=14] | [destination=0x00007ffbc9b04f60]
+         @0x000002a89d420732: c01a
+relocInfo@0x000002a89d420732 [type=12(metadata) addr=0x000002a89d42080a offset=26] | [metadata_addr=0x000002a89d42080c *=0x000002a8b7cb8540 offset=0]metadata_value=0x000002a8b7cb8540: method data for {method} {0x000002a8b7a755e0} 'length' '()I' in 'java/lang/String'
+         @0x000002a89d420734: c012
+relocInfo@0x000002a89d420734 [type=12(metadata) addr=0x000002a89d42081c offset=18] | [metadata_addr=0x000002a89d42081e *=0x000002a8b7cb8720 offset=0]metadata_value=0x000002a8b7cb8720: method data for {method} {0x000002a8b7a7a980} 'coder' '()B' in 'java/lang/String'
+         @0x000002a89d420736: c028
+relocInfo@0x000002a89d420736 [type=12(metadata) addr=0x000002a89d420844 offset=40] | [metadata_addr=0x000002a89d420846 *=0x000002a8b7cb8720 offset=0]metadata_value=0x000002a8b7cb8720: method data for {method} {0x000002a8b7a7a980} 'coder' '()B' in 'java/lang/String'
+         @0x000002a89d420738: c014
+relocInfo@0x000002a89d420738 [type=12(metadata) addr=0x000002a89d420858 offset=20] | [metadata_addr=0x000002a89d42085a *=0x000002a8b7cb8720 offset=0]metadata_value=0x000002a8b7cb8720: method data for {method} {0x000002a8b7a7a980} 'coder' '()B' in 'java/lang/String'
+         @0x000002a89d42073a: b024
+relocInfo@0x000002a89d42073a [type=11(poll_return) addr=0x000002a89d42087c offset=36]
+         @0x000002a89d42073c: c004
+relocInfo@0x000002a89d42073c [type=12(metadata) addr=0x000002a89d420880 offset=4] | [metadata_addr=0x000002a89d420882 *=0x000002a8b7a755d8 offset=0]metadata_value=0x000002a8b7a755d8: {method} {0x000002a8b7a755e0} 'length' '()I' in 'java/lang/String'
+         @0x000002a89d42073e: 6417
+relocInfo@0x000002a89d42073e [type=6(runtime_call) addr=0x000002a89d420897 offset=23 format=1] | [destination=0x000002a89cd1e740]
+         @0x000002a89d420740: 640a
+relocInfo@0x000002a89d420740 [type=6(runtime_call) addr=0x000002a89d4208a1 offset=10 format=1] | [destination=0x000002a89cd24d40]
+         @0x000002a89d420742: f803c9f5e0807ffb7005
+relocInfo@0x000002a89d42074a [type=7(external_word) addr=0x000002a89d4208a6 offset=5 data={c9f5e0807ffb}] | [target=0x00007ffbc9f5e080]
+         @0x000002a89d42074c: 600e
+relocInfo@0x000002a89d42074c [type=6(runtime_call) addr=0x000002a89d4208b4 offset=14] | [destination=0x00007ffbc9b04f60]
+         @0x000002a89d42074e: c00e
+relocInfo@0x000002a89d42074e [type=12(metadata) addr=0x000002a89d4208c2 offset=14] | [metadata_addr=0x000002a89d4208c4 *=0x000002a8b7a7a978 offset=0]metadata_value=0x000002a8b7a7a978: {method} {0x000002a8b7a7a980} 'coder' '()B' in 'java/lang/String'
+         @0x000002a89d420750: 6417
+relocInfo@0x000002a89d420750 [type=6(runtime_call) addr=0x000002a89d4208d9 offset=23 format=1] | [destination=0x000002a89cd1e740]
+         @0x000002a89d420752: 643a
+relocInfo@0x000002a89d420752 [type=6(runtime_call) addr=0x000002a89d420913 offset=58 format=1] | [destination=0x000002a89cd26040]
+         @0x000002a89d420754: 000d
+relocInfo@0x000002a89d420754 [type=0(none) addr=0x000002a89d420920 offset=13]
+         @0x000002a89d420756: 6428
+relocInfo@0x000002a89d420756 [type=6(runtime_call) addr=0x000002a89d420948 offset=40 format=1] | [destination=0x000002a89cd22640]
+         @0x000002a89d420758: f803c9f5e0807ffb7005
+relocInfo@0x000002a89d420760 [type=7(external_word) addr=0x000002a89d42094d offset=5 data={c9f5e0807ffb}] | [target=0x00007ffbc9f5e080]
+         @0x000002a89d420762: 600e
+relocInfo@0x000002a89d420762 [type=6(runtime_call) addr=0x000002a89d42095b offset=14] | [destination=0x00007ffbc9b04f60]
+         @0x000002a89d420764: f801fede900e
+relocInfo@0x000002a89d420768 [type=9(section_word) addr=0x000002a89d420969 offset=14 data=-290] | [target=0x000002a89d420969]
+         @0x000002a89d42076a: 640c
+relocInfo@0x000002a89d42076a [type=6(runtime_call) addr=0x000002a89d420975 offset=12 format=1] | [destination=0x000002a89cdf3440]
+         @0x000002a89d42076c: 0000
+relocInfo@0x000002a89d42076c [type=0(none) addr=0x000002a89d420975 offset=0]
+         @0x000002a89d42076e: 0000
+relocInfo@0x000002a89d42076e [type=0(none) addr=0x000002a89d420975 offset=0]
+         @0x000002a89d420770: 
+Compiled method (c2)      98    3       4       java.lang.String::length (11 bytes)
+ total in heap  [0x000002a8a4880010,0x000002a8a4880398] = 904
+ relocation     [0x000002a8a4880198,0x000002a8a48801c0] = 40
+ main code      [0x000002a8a48801c0,0x000002a8a4880260] = 160
+ stub code      [0x000002a8a4880260,0x000002a8a4880288] = 40
+ metadata       [0x000002a8a4880288,0x000002a8a4880290] = 8
+ scopes data    [0x000002a8a4880290,0x000002a8a48802c8] = 56
+ scopes pcs     [0x000002a8a48802c8,0x000002a8a4880368] = 160
+ dependencies   [0x000002a8a4880368,0x000002a8a4880370] = 8
+ handler table  [0x000002a8a4880370,0x000002a8a4880388] = 24
+ nul chk table  [0x000002a8a4880388,0x000002a8a4880398] = 16
+relocations:
+         @0x000002a8a4880198: 6017
+relocInfo@0x000002a8a4880198 [type=6(runtime_call) addr=0x000002a8a48801d7 offset=23] | [destination=0x000002a89cdf4420]
+         @0x000002a8a488019a: 3420
+relocInfo@0x000002a8a488019a [type=3(opt_virtual_call) addr=0x000002a8a48801f7 offset=32 format=1] | [destination=0x000002a89cdf4120 metadata=0x0000000000000000]
+         @0x000002a8a488019c: b017
+relocInfo@0x000002a8a488019c [type=11(poll_return) addr=0x000002a8a488020e offset=23]
+         @0x000002a8a488019e: 640c
+relocInfo@0x000002a8a488019e [type=6(runtime_call) addr=0x000002a8a488021a offset=12 format=1] | [destination=0x000002a89cd18a20]
+         @0x000002a8a48801a0: 640d
+relocInfo@0x000002a8a48801a0 [type=6(runtime_call) addr=0x000002a8a4880227 offset=13 format=1] | [destination=0x000002a89cdf3120]
+         @0x000002a8a48801a2: f803ca013c707ffb7005
+relocInfo@0x000002a8a48801aa [type=7(external_word) addr=0x000002a8a488022c offset=5 data={ca013c707ffb}] | [target=0x00007ffbca013c70]
+         @0x000002a8a48801ac: 600e
+relocInfo@0x000002a8a48801ac [type=6(runtime_call) addr=0x000002a8a488023a offset=14] | [destination=0x00007ffbc9b04f60]
+         @0x000002a8a48801ae: 0026
+relocInfo@0x000002a8a48801ae [type=0(none) addr=0x000002a8a4880260 offset=38]
+         @0x000002a8a48801b0: f801ffc95000
+relocInfo@0x000002a8a48801b4 [type=5(static_stub) addr=0x000002a8a4880260 offset=0 data=-55] | [static_call=0x000002a8a48801f7]
+         @0x000002a8a48801b6: c000
+relocInfo@0x000002a8a48801b6 [type=12(metadata) addr=0x000002a8a4880260 offset=0] | [metadata_addr=0x000002a8a4880262 *=0x0000000000000000 offset=0]
+         @0x000002a8a48801b8: 640a
+relocInfo@0x000002a8a48801b8 [type=6(runtime_call) addr=0x000002a8a488026a offset=10 format=1] | [destination=0xffffffffffffffff]
+         @0x000002a8a48801ba: 6405
+relocInfo@0x000002a8a48801ba [type=6(runtime_call) addr=0x000002a8a488026f offset=5 format=1] | [destination=0x000002a89cd25920]
+         @0x000002a8a48801bc: 640f
+relocInfo@0x000002a8a48801bc [type=6(runtime_call) addr=0x000002a8a488027e offset=15 format=1] | [destination=0x000002a89cdf3440]
+         @0x000002a8a48801be: 0000
+relocInfo@0x000002a8a48801be [type=0(none) addr=0x000002a8a488027e offset=0]
+         @0x000002a8a48801c0: 
+Compiled method (c1)      99    4       3       java.lang.String::charAt (25 bytes)
+ total in heap  [0x000002a89d420b10,0x000002a89d4216e0] = 3024
+ relocation     [0x000002a89d420c98,0x000002a89d420d60] = 200
+ main code      [0x000002a89d420d60,0x000002a89d4212a0] = 1344
+ stub code      [0x000002a89d4212a0,0x000002a89d421320] = 128
+ metadata       [0x000002a89d421320,0x000002a89d421350] = 48
+ scopes data    [0x000002a89d421350,0x000002a89d4214a0] = 336
+ scopes pcs     [0x000002a89d4214a0,0x000002a89d4216c0] = 544
+ dependencies   [0x000002a89d4216c0,0x000002a89d4216c8] = 8
+ nul chk table  [0x000002a89d4216c8,0x000002a89d4216e0] = 24
+relocations:
+         @0x000002a89d420c98: 6017
+relocInfo@0x000002a89d420c98 [type=6(runtime_call) addr=0x000002a89d420d77 offset=23] | [destination=0x000002a89cdf4420]
+         @0x000002a89d420c9a: c018
+relocInfo@0x000002a89d420c9a [type=12(metadata) addr=0x000002a89d420d8f offset=24] | [metadata_addr=0x000002a89d420d91 *=0x000002a8b7cb88f0 offset=0]metadata_value=0x000002a8b7cb88f0: method data for {method} {0x000002a8b7a75788} 'charAt' '(I)C' in 'java/lang/String'
+         @0x000002a89d420c9c: c021
+relocInfo@0x000002a89d420c9c [type=12(metadata) addr=0x000002a89d420db0 offset=33] | [metadata_addr=0x000002a89d420db2 *=0x000002a8b7cb88f0 offset=0]metadata_value=0x000002a8b7cb88f0: method data for {method} {0x000002a8b7a75788} 'charAt' '(I)C' in 'java/lang/String'
+         @0x000002a89d420c9e: c012
+relocInfo@0x000002a89d420c9e [type=12(metadata) addr=0x000002a89d420dc2 offset=18] | [metadata_addr=0x000002a89d420dc4 *=0x000002a8b7c7f040 offset=0]metadata_value=0x000002a8b7c7f040: method data for {method} {0x000002a8b7a7ab00} 'isLatin1' '()Z' in 'java/lang/String'
+         @0x000002a89d420ca0: c028
+relocInfo@0x000002a89d420ca0 [type=12(metadata) addr=0x000002a89d420dea offset=40] | [metadata_addr=0x000002a89d420dec *=0x000002a8b7c7f040 offset=0]metadata_value=0x000002a8b7c7f040: method data for {method} {0x000002a8b7a7ab00} 'isLatin1' '()Z' in 'java/lang/String'
+         @0x000002a89d420ca2: c017
+relocInfo@0x000002a89d420ca2 [type=12(metadata) addr=0x000002a89d420e01 offset=23] | [metadata_addr=0x000002a89d420e03 *=0x000002a8b7c7f040 offset=0]metadata_value=0x000002a8b7c7f040: method data for {method} {0x000002a8b7a7ab00} 'isLatin1' '()Z' in 'java/lang/String'
+         @0x000002a89d420ca4: c036
+relocInfo@0x000002a89d420ca4 [type=12(metadata) addr=0x000002a89d420e37 offset=54] | [metadata_addr=0x000002a89d420e39 *=0x000002a8b7c7f040 offset=0]metadata_value=0x000002a8b7c7f040: method data for {method} {0x000002a8b7a7ab00} 'isLatin1' '()Z' in 'java/lang/String'
+         @0x000002a89d420ca6: c025
+relocInfo@0x000002a89d420ca6 [type=12(metadata) addr=0x000002a89d420e5c offset=37] | [metadata_addr=0x000002a89d420e5e *=0x000002a8b7cb88f0 offset=0]metadata_value=0x000002a8b7cb88f0: method data for {method} {0x000002a8b7a75788} 'charAt' '(I)C' in 'java/lang/String'
+         @0x000002a89d420ca8: f803ca3b49407ffb703b
+relocInfo@0x000002a89d420cb0 [type=7(external_word) addr=0x000002a89d420e97 offset=59 data={ca3b49407ffb}] | [target=0x00007ffbca3b4940]
+         @0x000002a89d420cb2: f803ca0a84287ffb7013
+relocInfo@0x000002a89d420cba [type=7(external_word) addr=0x000002a89d420eaa offset=19 data={ca0a84287ffb}] | [target=0x00007ffbca0a8428]
+         @0x000002a89d420cbc: 600e
+relocInfo@0x000002a89d420cbc [type=6(runtime_call) addr=0x000002a89d420eb8 offset=14] | [destination=0x00007ffbc9b04f60]
+         @0x000002a89d420cbe: c014
+relocInfo@0x000002a89d420cbe [type=12(metadata) addr=0x000002a89d420ecc offset=20] | [metadata_addr=0x000002a89d420ece *=0x000002a8b7cb88f0 offset=0]metadata_value=0x000002a8b7cb88f0: method data for {method} {0x000002a8b7a75788} 'charAt' '(I)C' in 'java/lang/String'
+         @0x000002a89d420cc0: c012
+relocInfo@0x000002a89d420cc0 [type=12(metadata) addr=0x000002a89d420ede offset=18] | [metadata_addr=0x000002a89d420ee0 *=0x000002a8b7cb8b18 offset=0]metadata_value=0x000002a8b7cb8b18: method data for {method} {0x000002a8b7bd8538} 'charAt' '([BI)C' in 'java/lang/StringLatin1'
+         @0x000002a89d420cc2: c02c
+relocInfo@0x000002a89d420cc2 [type=12(metadata) addr=0x000002a89d420f0a offset=44] | [metadata_addr=0x000002a89d420f0c *=0x000002a8b7cb8b18 offset=0]metadata_value=0x000002a8b7cb8b18: method data for {method} {0x000002a8b7bd8538} 'charAt' '([BI)C' in 'java/lang/StringLatin1'
+         @0x000002a89d420cc4: c03c
+relocInfo@0x000002a89d420cc4 [type=12(metadata) addr=0x000002a89d420f46 offset=60] | [metadata_addr=0x000002a89d420f48 *=0x000002a8b7cb8b18 offset=0]metadata_value=0x000002a8b7cb8b18: method data for {method} {0x000002a8b7bd8538} 'charAt' '([BI)C' in 'java/lang/StringLatin1'
+         @0x000002a89d420cc6: b060
+relocInfo@0x000002a89d420cc6 [type=11(poll_return) addr=0x000002a89d420fa6 offset=96]
+         @0x000002a89d420cc8: f803ca3b49407ffb7009
+relocInfo@0x000002a89d420cd0 [type=7(external_word) addr=0x000002a89d420faf offset=9 data={ca3b49407ffb}] | [target=0x00007ffbca3b4940]
+         @0x000002a89d420cd2: f803ca0a84287ffb7013
+relocInfo@0x000002a89d420cda [type=7(external_word) addr=0x000002a89d420fc2 offset=19 data={ca0a84287ffb}] | [target=0x00007ffbca0a8428]
+         @0x000002a89d420cdc: 600e
+relocInfo@0x000002a89d420cdc [type=6(runtime_call) addr=0x000002a89d420fd0 offset=14] | [destination=0x00007ffbc9b04f60]
+         @0x000002a89d420cde: c014
+relocInfo@0x000002a89d420cde [type=12(metadata) addr=0x000002a89d420fe4 offset=20] | [metadata_addr=0x000002a89d420fe6 *=0x000002a8b7cb88f0 offset=0]metadata_value=0x000002a8b7cb88f0: method data for {method} {0x000002a8b7a75788} 'charAt' '(I)C' in 'java/lang/String'
+         @0x000002a89d420ce0: c012
+relocInfo@0x000002a89d420ce0 [type=12(metadata) addr=0x000002a89d420ff6 offset=18] | [metadata_addr=0x000002a89d420ff8 *=0x000002a8b7cb8d08 offset=0]metadata_value=0x000002a8b7cb8d08: method data for {method} {0x000002a8b7c35690} 'charAt' '([BI)C' in 'java/lang/StringUTF16'
+         @0x000002a89d420ce2: c028
+relocInfo@0x000002a89d420ce2 [type=12(metadata) addr=0x000002a89d42101e offset=40] | [metadata_addr=0x000002a89d421020 *=0x000002a8b7cb8d08 offset=0]metadata_value=0x000002a8b7cb8d08: method data for {method} {0x000002a8b7c35690} 'charAt' '([BI)C' in 'java/lang/StringUTF16'
+         @0x000002a89d420ce4: c012
+relocInfo@0x000002a89d420ce4 [type=12(metadata) addr=0x000002a89d421030 offset=18] | [metadata_addr=0x000002a89d421032 *=0x000002a8b7cb8ed8 offset=0]metadata_value=0x000002a8b7cb8ed8: method data for {method} {0x000002a8b7c361c8} 'checkIndex' '(I[B)V' in 'java/lang/StringUTF16'
+         @0x000002a89d420ce6: c028
+relocInfo@0x000002a89d420ce6 [type=12(metadata) addr=0x000002a89d421058 offset=40] | [metadata_addr=0x000002a89d42105a *=0x000002a8b7cb8ed8 offset=0]metadata_value=0x000002a8b7cb8ed8: method data for {method} {0x000002a8b7c361c8} 'checkIndex' '(I[B)V' in 'java/lang/StringUTF16'
+         @0x000002a89d420ce8: c012
+relocInfo@0x000002a89d420ce8 [type=12(metadata) addr=0x000002a89d42106a offset=18] | [metadata_addr=0x000002a89d42106c *=0x000002a8b7cb90a8 offset=0]metadata_value=0x000002a8b7cb90a8: method data for {method} {0x000002a8b7c30200} 'length' '([B)I' in 'java/lang/StringUTF16'
+         @0x000002a89d420cea: c02b
+relocInfo@0x000002a89d420cea [type=12(metadata) addr=0x000002a89d421095 offset=43] | [metadata_addr=0x000002a89d421097 *=0x000002a8b7cb8ed8 offset=0]metadata_value=0x000002a8b7cb8ed8: method data for {method} {0x000002a8b7c361c8} 'checkIndex' '(I[B)V' in 'java/lang/StringUTF16'
+         @0x000002a89d420cec: 442a
+relocInfo@0x000002a89d420cec [type=4(static_call) addr=0x000002a89d4210bf offset=42 format=1] | [destination=0x000002a89cdf3b20 metadata=0x0000000000000000]
+         @0x000002a89d420cee: b033
+relocInfo@0x000002a89d420cee [type=11(poll_return) addr=0x000002a89d4210f2 offset=51]
+         @0x000002a89d420cf0: 0006
+relocInfo@0x000002a89d420cf0 [type=0(none) addr=0x000002a89d4210f8 offset=6]
+         @0x000002a89d420cf2: c012
+relocInfo@0x000002a89d420cf2 [type=12(metadata) addr=0x000002a89d42110a offset=18] | [metadata_addr=0x000002a89d42110c *=0x000002a8b7cb8b18 offset=0]metadata_value=0x000002a8b7cb8b18: method data for {method} {0x000002a8b7bd8538} 'charAt' '([BI)C' in 'java/lang/StringLatin1'
+         @0x000002a89d420cf4: 341d
+relocInfo@0x000002a89d420cf4 [type=3(opt_virtual_call) addr=0x000002a89d421127 offset=29 format=1] | [destination=0x000002a89cdf4120 metadata=0x0000000000000000]
+         @0x000002a89d420cf6: c00f
+relocInfo@0x000002a89d420cf6 [type=12(metadata) addr=0x000002a89d421136 offset=15] | [metadata_addr=0x000002a89d421138 *=0x000002a8b7a75780 offset=0]metadata_value=0x000002a8b7a75780: {method} {0x000002a8b7a75788} 'charAt' '(I)C' in 'java/lang/String'
+         @0x000002a89d420cf8: 6417
+relocInfo@0x000002a89d420cf8 [type=6(runtime_call) addr=0x000002a89d42114d offset=23 format=1] | [destination=0x000002a89cd1e740]
+         @0x000002a89d420cfa: c00a
+relocInfo@0x000002a89d420cfa [type=12(metadata) addr=0x000002a89d421157 offset=10] | [metadata_addr=0x000002a89d421159 *=0x000002a8b7a7aaf8 offset=0]metadata_value=0x000002a8b7a7aaf8: {method} {0x000002a8b7a7ab00} 'isLatin1' '()Z' in 'java/lang/String'
+         @0x000002a89d420cfc: 6417
+relocInfo@0x000002a89d420cfc [type=6(runtime_call) addr=0x000002a89d42116e offset=23 format=1] | [destination=0x000002a89cd1e740]
+         @0x000002a89d420cfe: c00a
+relocInfo@0x000002a89d420cfe [type=12(metadata) addr=0x000002a89d421178 offset=10] | [metadata_addr=0x000002a89d42117a *=0x000002a8b7bd8530 offset=0]metadata_value=0x000002a8b7bd8530: {method} {0x000002a8b7bd8538} 'charAt' '([BI)C' in 'java/lang/StringLatin1'
+         @0x000002a89d420d00: 6417
+relocInfo@0x000002a89d420d00 [type=6(runtime_call) addr=0x000002a89d42118f offset=23 format=1] | [destination=0x000002a89cd1e740]
+         @0x000002a89d420d02: 640a
+relocInfo@0x000002a89d420d02 [type=6(runtime_call) addr=0x000002a89d421199 offset=10 format=1] | [destination=0x000002a89cd24d40]
+         @0x000002a89d420d04: f803c9f5e0807ffb7005
+relocInfo@0x000002a89d420d0c [type=7(external_word) addr=0x000002a89d42119e offset=5 data={c9f5e0807ffb}] | [target=0x00007ffbc9f5e080]
+         @0x000002a89d420d0e: 600e
+relocInfo@0x000002a89d420d0e [type=6(runtime_call) addr=0x000002a89d4211ac offset=14] | [destination=0x00007ffbc9b04f60]
+         @0x000002a89d420d10: c00e
+relocInfo@0x000002a89d420d10 [type=12(metadata) addr=0x000002a89d4211ba offset=14] | [metadata_addr=0x000002a89d4211bc *=0x000002a8b7c35688 offset=0]metadata_value=0x000002a8b7c35688: {method} {0x000002a8b7c35690} 'charAt' '([BI)C' in 'java/lang/StringUTF16'
+         @0x000002a89d420d12: 6417
+relocInfo@0x000002a89d420d12 [type=6(runtime_call) addr=0x000002a89d4211d1 offset=23 format=1] | [destination=0x000002a89cd1e740]
+         @0x000002a89d420d14: c00a
+relocInfo@0x000002a89d420d14 [type=12(metadata) addr=0x000002a89d4211db offset=10] | [metadata_addr=0x000002a89d4211dd *=0x000002a8b7c361c0 offset=0]metadata_value=0x000002a8b7c361c0: {method} {0x000002a8b7c361c8} 'checkIndex' '(I[B)V' in 'java/lang/StringUTF16'
+         @0x000002a89d420d16: 6417
+relocInfo@0x000002a89d420d16 [type=6(runtime_call) addr=0x000002a89d4211f2 offset=23 format=1] | [destination=0x000002a89cd1e740]
+         @0x000002a89d420d18: c00a
+relocInfo@0x000002a89d420d18 [type=12(metadata) addr=0x000002a89d4211fc offset=10] | [metadata_addr=0x000002a89d4211fe *=0x000002a8b7c301f8 offset=0]metadata_value=0x000002a8b7c301f8: {method} {0x000002a8b7c30200} 'length' '([B)I' in 'java/lang/StringUTF16'
+         @0x000002a89d420d1a: 6417
+relocInfo@0x000002a89d420d1a [type=6(runtime_call) addr=0x000002a89d421213 offset=23 format=1] | [destination=0x000002a89cd1e740]
+         @0x000002a89d420d1c: 640a
+relocInfo@0x000002a89d420d1c [type=6(runtime_call) addr=0x000002a89d42121d offset=10 format=1] | [destination=0x000002a89cd24d40]
+         @0x000002a89d420d1e: f803c9f5e0807ffb7005
+relocInfo@0x000002a89d420d26 [type=7(external_word) addr=0x000002a89d421222 offset=5 data={c9f5e0807ffb}] | [target=0x00007ffbc9f5e080]
+         @0x000002a89d420d28: 600e
+relocInfo@0x000002a89d420d28 [type=6(runtime_call) addr=0x000002a89d421230 offset=14] | [destination=0x00007ffbc9b04f60]
+         @0x000002a89d420d2a: c00e
+relocInfo@0x000002a89d420d2a [type=12(metadata) addr=0x000002a89d42123e offset=14] | [metadata_addr=0x000002a89d421240 *=0x0000000000000000 offset=0]
+         @0x000002a89d420d2c: 640f
+relocInfo@0x000002a89d420d2c [type=6(runtime_call) addr=0x000002a89d42124d offset=15 format=1] | [destination=0x000002a89cd1fb60]
+         @0x000002a89d420d2e: 640d
+relocInfo@0x000002a89d420d2e [type=6(runtime_call) addr=0x000002a89d42125a offset=13 format=1] | [destination=0x000002a89cd24540]
+         @0x000002a89d420d30: 643d
+relocInfo@0x000002a89d420d30 [type=6(runtime_call) addr=0x000002a89d421297 offset=61 format=1] | [destination=0x000002a89cd26040]
+         @0x000002a89d420d32: 0009
+relocInfo@0x000002a89d420d32 [type=0(none) addr=0x000002a89d4212a0 offset=9]
+         @0x000002a89d420d34: f801fca15005
+relocInfo@0x000002a89d420d38 [type=5(static_stub) addr=0x000002a89d4212a5 offset=5 data=-863] | [static_call=0x000002a89d4210bf]
+         @0x000002a89d420d3a: c000
+relocInfo@0x000002a89d420d3a [type=12(metadata) addr=0x000002a89d4212a5 offset=0] | [metadata_addr=0x000002a89d4212a7 *=0x0000000000000000 offset=0]
+         @0x000002a89d420d3c: 640a
+relocInfo@0x000002a89d420d3c [type=6(runtime_call) addr=0x000002a89d4212af offset=10 format=1] | [destination=0xffffffffffffffff]
+         @0x000002a89d420d3e: f801fc395006
+relocInfo@0x000002a89d420d42 [type=5(static_stub) addr=0x000002a89d4212b5 offset=6 data=-967] | [static_call=0x000002a89d421127]
+         @0x000002a89d420d44: c000
+relocInfo@0x000002a89d420d44 [type=12(metadata) addr=0x000002a89d4212b5 offset=0] | [metadata_addr=0x000002a89d4212b7 *=0x0000000000000000 offset=0]
+         @0x000002a89d420d46: 640a
+relocInfo@0x000002a89d420d46 [type=6(runtime_call) addr=0x000002a89d4212bf offset=10 format=1] | [destination=0xffffffffffffffff]
+         @0x000002a89d420d48: 642d
+relocInfo@0x000002a89d420d48 [type=6(runtime_call) addr=0x000002a89d4212ec offset=45 format=1] | [destination=0x000002a89cd22640]
+         @0x000002a89d420d4a: f803c9f5e0807ffb7005
+relocInfo@0x000002a89d420d52 [type=7(external_word) addr=0x000002a89d4212f1 offset=5 data={c9f5e0807ffb}] | [target=0x00007ffbc9f5e080]
+         @0x000002a89d420d54: 600e
+relocInfo@0x000002a89d420d54 [type=6(runtime_call) addr=0x000002a89d4212ff offset=14] | [destination=0x00007ffbc9b04f60]
+         @0x000002a89d420d56: f801fe4e900e
+relocInfo@0x000002a89d420d5a [type=9(section_word) addr=0x000002a89d42130d offset=14 data=-434] | [target=0x000002a89d42130d]
+         @0x000002a89d420d5c: 640c
+relocInfo@0x000002a89d420d5c [type=6(runtime_call) addr=0x000002a89d421319 offset=12 format=1] | [destination=0x000002a89cdf3440]
+         @0x000002a89d420d5e: 0000
+relocInfo@0x000002a89d420d5e [type=0(none) addr=0x000002a89d421319 offset=0]
+         @0x000002a89d420d60: 
+Compiled method (c2)     103    5       4       java.lang.String::charAt (25 bytes)
+ total in heap  [0x000002a8a4880410,0x000002a8a4880838] = 1064
+ relocation     [0x000002a8a4880598,0x000002a8a48805e0] = 72
+ main code      [0x000002a8a48805e0,0x000002a8a48806a0] = 192
+ stub code      [0x000002a8a48806a0,0x000002a8a48806e8] = 72
+ metadata       [0x000002a8a48806e8,0x000002a8a48806f0] = 8
+ scopes data    [0x000002a8a48806f0,0x000002a8a4880738] = 72
+ scopes pcs     [0x000002a8a4880738,0x000002a8a48807e8] = 176
+ dependencies   [0x000002a8a48807e8,0x000002a8a48807f0] = 8
+ handler table  [0x000002a8a48807f0,0x000002a8a4880838] = 72
+relocations:
+         @0x000002a8a4880598: 6017
+relocInfo@0x000002a8a4880598 [type=6(runtime_call) addr=0x000002a8a48805f7 offset=23] | [destination=0x000002a89cdf4420]
+         @0x000002a8a488059a: 341c
+relocInfo@0x000002a8a488059a [type=3(opt_virtual_call) addr=0x000002a8a4880613 offset=28 format=1] | [destination=0x000002a89cdf4120 metadata=0x0000000000000000]
+         @0x000002a8a488059c: f803ca3b49407ffb700e
+relocInfo@0x000002a8a48805a4 [type=7(external_word) addr=0x000002a8a4880621 offset=14 data={ca3b49407ffb}] | [target=0x00007ffbca3b4940]
+         @0x000002a8a48805a6: f803ca0a84287ffb7013
+relocInfo@0x000002a8a48805ae [type=7(external_word) addr=0x000002a8a4880634 offset=19 data={ca0a84287ffb}] | [target=0x00007ffbca0a8428]
+         @0x000002a8a48805b0: 600e
+relocInfo@0x000002a8a48805b0 [type=6(runtime_call) addr=0x000002a8a4880642 offset=14] | [destination=0x00007ffbc9b04f60]
+         @0x000002a8a48805b2: 441d
+relocInfo@0x000002a8a48805b2 [type=4(static_call) addr=0x000002a8a488065f offset=29 format=1] | [destination=0x000002a89cdf3b20 metadata=0x0000000000000000]
+         @0x000002a8a48805b4: b011
+relocInfo@0x000002a8a48805b4 [type=11(poll_return) addr=0x000002a8a4880670 offset=17]
+         @0x000002a8a48805b6: 440b
+relocInfo@0x000002a8a48805b6 [type=4(static_call) addr=0x000002a8a488067b offset=11 format=1] | [destination=0x000002a89cdf3b20 metadata=0x0000000000000000]
+         @0x000002a8a48805b8: 6419
+relocInfo@0x000002a8a48805b8 [type=6(runtime_call) addr=0x000002a8a4880694 offset=25 format=1] | [destination=0x000002a89cd18a20]
+         @0x000002a8a48805ba: 000c
+relocInfo@0x000002a8a48805ba [type=0(none) addr=0x000002a8a48806a0 offset=12]
+         @0x000002a8a48805bc: f801ffcd5000
+relocInfo@0x000002a8a48805c0 [type=5(static_stub) addr=0x000002a8a48806a0 offset=0 data=-51] | [static_call=0x000002a8a4880613]
+         @0x000002a8a48805c2: c000
+relocInfo@0x000002a8a48805c2 [type=12(metadata) addr=0x000002a8a48806a0 offset=0] | [metadata_addr=0x000002a8a48806a2 *=0x0000000000000000 offset=0]
+         @0x000002a8a48805c4: 640a
+relocInfo@0x000002a8a48805c4 [type=6(runtime_call) addr=0x000002a8a48806aa offset=10 format=1] | [destination=0xffffffffffffffff]
+         @0x000002a8a48805c6: f801ff815005
+relocInfo@0x000002a8a48805ca [type=5(static_stub) addr=0x000002a8a48806af offset=5 data=-127] | [static_call=0x000002a8a488065f]
+         @0x000002a8a48805cc: c000
+relocInfo@0x000002a8a48805cc [type=12(metadata) addr=0x000002a8a48806af offset=0] | [metadata_addr=0x000002a8a48806b1 *=0x0000000000000000 offset=0]
+         @0x000002a8a48805ce: 640a
+relocInfo@0x000002a8a48805ce [type=6(runtime_call) addr=0x000002a8a48806b9 offset=10 format=1] | [destination=0xffffffffffffffff]
+         @0x000002a8a48805d0: f801ff655005
+relocInfo@0x000002a8a48805d4 [type=5(static_stub) addr=0x000002a8a48806be offset=5 data=-155] | [static_call=0x000002a8a488067b]
+         @0x000002a8a48805d6: c000
+relocInfo@0x000002a8a48805d6 [type=12(metadata) addr=0x000002a8a48806be offset=0] | [metadata_addr=0x000002a8a48806c0 *=0x0000000000000000 offset=0]
+         @0x000002a8a48805d8: 640a
+relocInfo@0x000002a8a48805d8 [type=6(runtime_call) addr=0x000002a8a48806c8 offset=10 format=1] | [destination=0xffffffffffffffff]
+         @0x000002a8a48805da: 6405
+relocInfo@0x000002a8a48805da [type=6(runtime_call) addr=0x000002a8a48806cd offset=5 format=1] | [destination=0x000002a89cd25920]
+         @0x000002a8a48805dc: 640f
+relocInfo@0x000002a8a48805dc [type=6(runtime_call) addr=0x000002a8a48806dc offset=15 format=1] | [destination=0x000002a89cdf3440]
+         @0x000002a8a48805de:
+
+...
+Output overflow:
+JT Harness has limited the test output to the text
+at the beginning and the end, so that you can see how the
+test began, and how it completed.
+
+If you need to see more of the output from the test,
+set the system property javatest.maxOutputSize to a higher
+value. The current value is 100000
+...
+
+e_call) addr=0x000002a89d45e75e offset=13 format=1] | [destination=0x000002a89cd24140]
+         @0x000002a89d45df24: 643d
+relocInfo@0x000002a89d45df24 [type=6(runtime_call) addr=0x000002a89d45e79b offset=61 format=1] | [destination=0x000002a89cd26040]
+         @0x000002a89d45df26: 0005
+relocInfo@0x000002a89d45df26 [type=0(none) addr=0x000002a89d45e7a0 offset=5]
+         @0x000002a89d45df28: f801ff815005
+relocInfo@0x000002a89d45df2c [type=5(static_stub) addr=0x000002a89d45e7a5 offset=5 data=-127] | [static_call=0x000002a89d45e01f]
+         @0x000002a89d45df2e: c000
+relocInfo@0x000002a89d45df2e [type=12(metadata) addr=0x000002a89d45e7a5 offset=0] | [metadata_addr=0x000002a89d45e7a7 *=0x0000000000000000 offset=0]
+         @0x000002a89d45df30: 640a
+relocInfo@0x000002a89d45df30 [type=6(runtime_call) addr=0x000002a89d45e7af offset=10 format=1] | [destination=0xffffffffffffffff]
+         @0x000002a89d45df32: f801ff735006
+relocInfo@0x000002a89d45df36 [type=5(static_stub) addr=0x000002a89d45e7b5 offset=6 data=-141] | [static_call=0x000002a89d45e02d]
+         @0x000002a89d45df38: c000
+relocInfo@0x000002a89d45df38 [type=12(metadata) addr=0x000002a89d45e7b5 offset=0] | [metadata_addr=0x000002a89d45e7b7 *=0x0000000000000000 offset=0]
+         @0x000002a89d45df3a: 640a
+relocInfo@0x000002a89d45df3a [type=6(runtime_call) addr=0x000002a89d45e7bf offset=10 format=1] | [destination=0xffffffffffffffff]
+         @0x000002a89d45df3c: f801fc915006
+relocInfo@0x000002a89d45df40 [type=5(static_stub) addr=0x000002a89d45e7c5 offset=6 data=-879] | [static_call=0x000002a89d45e30f]
+         @0x000002a89d45df42: c000
+relocInfo@0x000002a89d45df42 [type=12(metadata) addr=0x000002a89d45e7c5 offset=0] | [metadata_addr=0x000002a89d45e7c7 *=0x0000000000000000 offset=0]
+         @0x000002a89d45df44: 640a
+relocInfo@0x000002a89d45df44 [type=6(runtime_call) addr=0x000002a89d45e7cf offset=10 format=1] | [destination=0xffffffffffffffff]
+         @0x000002a89d45df46: f801fc835006
+relocInfo@0x000002a89d45df4a [type=5(static_stub) addr=0x000002a89d45e7d5 offset=6 data=-893] | [static_call=0x000002a89d45e31d]
+         @0x000002a89d45df4c: c000
+relocInfo@0x000002a89d45df4c [type=12(metadata) addr=0x000002a89d45e7d5 offset=0] | [metadata_addr=0x000002a89d45e7d7 *=0x0000000000000000 offset=0]
+         @0x000002a89d45df4e: 640a
+relocInfo@0x000002a89d45df4e [type=6(runtime_call) addr=0x000002a89d45e7df offset=10 format=1] | [destination=0xffffffffffffffff]
+         @0x000002a89d45df50: f801fbd15006
+relocInfo@0x000002a89d45df54 [type=5(static_stub) addr=0x000002a89d45e7e5 offset=6 data=-1071] | [static_call=0x000002a89d45e3cf]
+         @0x000002a89d45df56: c000
+relocInfo@0x000002a89d45df56 [type=12(metadata) addr=0x000002a89d45e7e5 offset=0] | [metadata_addr=0x000002a89d45e7e7 *=0x0000000000000000 offset=0]
+         @0x000002a89d45df58: 640a
+relocInfo@0x000002a89d45df58 [type=6(runtime_call) addr=0x000002a89d45e7ef offset=10 format=1] | [destination=0xffffffffffffffff]
+         @0x000002a89d45df5a: f801fad15006
+relocInfo@0x000002a89d45df5e [type=5(static_stub) addr=0x000002a89d45e7f5 offset=6 data=-1327] | [static_call=0x000002a89d45e4cf]
+         @0x000002a89d45df60: c000
+relocInfo@0x000002a89d45df60 [type=12(metadata) addr=0x000002a89d45e7f5 offset=0] | [metadata_addr=0x000002a89d45e7f7 *=0x0000000000000000 offset=0]
+         @0x000002a89d45df62: 640a
+relocInfo@0x000002a89d45df62 [type=6(runtime_call) addr=0x000002a89d45e7ff offset=10 format=1] | [destination=0xffffffffffffffff]
+         @0x000002a89d45df64: f801fa295006
+relocInfo@0x000002a89d45df68 [type=5(static_stub) addr=0x000002a89d45e805 offset=6 data=-1495] | [static_call=0x000002a89d45e577]
+         @0x000002a89d45df6a: c000
+relocInfo@0x000002a89d45df6a [type=12(metadata) addr=0x000002a89d45e805 offset=0] | [metadata_addr=0x000002a89d45e807 *=0x0000000000000000 offset=0]
+         @0x000002a89d45df6c: 640a
+relocInfo@0x000002a89d45df6c [type=6(runtime_call) addr=0x000002a89d45e80f offset=10 format=1] | [destination=0xffffffffffffffff]
+         @0x000002a89d45df6e: f801f9615006
+relocInfo@0x000002a89d45df72 [type=5(static_stub) addr=0x000002a89d45e815 offset=6 data=-1695] | [static_call=0x000002a89d45e63f]
+         @0x000002a89d45df74: c000
+relocInfo@0x000002a89d45df74 [type=12(metadata) addr=0x000002a89d45e815 offset=0] | [metadata_addr=0x000002a89d45e817 *=0x0000000000000000 offset=0]
+         @0x000002a89d45df76: 640a
+relocInfo@0x000002a89d45df76 [type=6(runtime_call) addr=0x000002a89d45e81f offset=10 format=1] | [destination=0xffffffffffffffff]
+         @0x000002a89d45df78: 642d
+relocInfo@0x000002a89d45df78 [type=6(runtime_call) addr=0x000002a89d45e84c offset=45 format=1] | [destination=0x000002a89cd22640]
+         @0x000002a89d45df7a: f803c9f5e0807ffb7005
+relocInfo@0x000002a89d45df82 [type=7(external_word) addr=0x000002a89d45e851 offset=5 data={c9f5e0807ffb}] | [target=0x00007ffbc9f5e080]
+         @0x000002a89d45df84: 600e
+relocInfo@0x000002a89d45df84 [type=6(runtime_call) addr=0x000002a89d45e85f offset=14] | [destination=0x00007ffbc9b04f60]
+         @0x000002a89d45df86: f801fcce900e
+relocInfo@0x000002a89d45df8a [type=9(section_word) addr=0x000002a89d45e86d offset=14 data=-818] | [target=0x000002a89d45e86d]
+         @0x000002a89d45df8c: 640c
+relocInfo@0x000002a89d45df8c [type=6(runtime_call) addr=0x000002a89d45e879 offset=12 format=1] | [destination=0x000002a89cdf3440]
+         @0x000002a89d45df8e: 0000
+relocInfo@0x000002a89d45df8e [type=0(none) addr=0x000002a89d45e879 offset=0]
+         @0x000002a89d45df90: 
+Compiled method (c1)     584  131   !   2       java.lang.StringCoding::decode (165 bytes)
+ total in heap  [0x000002a89d45ef90,0x000002a89d460d88] = 7672
+ relocation     [0x000002a89d45f118,0x000002a89d45f380] = 616
+ main code      [0x000002a89d45f380,0x000002a89d45fea0] = 2848
+ stub code      [0x000002a89d45fea0,0x000002a89d460020] = 384
+ oops           [0x000002a89d460020,0x000002a89d460028] = 8
+ metadata       [0x000002a89d460028,0x000002a89d4600b0] = 136
+ scopes data    [0x000002a89d4600b0,0x000002a89d460500] = 1104
+ scopes pcs     [0x000002a89d460500,0x000002a89d460ba0] = 1696
+ dependencies   [0x000002a89d460ba0,0x000002a89d460ba8] = 8
+ handler table  [0x000002a89d460ba8,0x000002a89d460d50] = 424
+ nul chk table  [0x000002a89d460d50,0x000002a89d460d88] = 56
+relocations:
+         @0x000002a89d45f118: 1050
+relocInfo@0x000002a89d45f118 [type=1(oop) addr=0x000002a89d45f3d0 offset=80] | [oop_addr=0x000002a89d45f3d2 *=0x000000072fd318b8 offset=0]
+         @0x000002a89d45f11a: 340f
+relocInfo@0x000002a89d45f11a [type=3(opt_virtual_call) addr=0x000002a89d45f3df offset=15 format=1] | [destination=0x000002a89cdf4120 metadata=0x0000000000000000]
+         @0x000002a89d45f11c: c00f
+relocInfo@0x000002a89d45f11c [type=12(metadata) addr=0x000002a89d45f3ee offset=15] | [metadata_addr=0x000002a89d45f3f0 *=0x0000000800005cb8 offset=0]metadata_value=0x0000000800005cb8: 'java/lang/ref/SoftReference'
+         @0x000002a89d45f11e: 1039
+relocInfo@0x000002a89d45f11e [type=1(oop) addr=0x000002a89d45f427 offset=57] | [oop_addr=0x000002a89d45f429 *=0x0000000000000000 offset=0]
+         @0x000002a89d45f120: f00a2420
+relocInfo@0x000002a89d45f122 [type=2(virtual_call) addr=0x000002a89d45f447 offset=32 format=1 data=10] | [destination=0x000002a89cdf3e20 cached_value=0x000002a89d45f43d metadata=0x0000000000000000]
+         @0x000002a89d45f124: c01a
+relocInfo@0x000002a89d45f124 [type=12(metadata) addr=0x000002a89d45f461 offset=26] | [metadata_addr=0x000002a89d45f463 *=0x0000000800025150 offset=0]metadata_value=0x0000000800025150: 'java/lang/StringCoding$StringDecoder'
+         @0x000002a89d45f126: 103e
+relocInfo@0x000002a89d45f126 [type=1(oop) addr=0x000002a89d45f49f offset=62] | [oop_addr=0x000002a89d45f4a1 *=0x000000072fd0b0c8 offset=0]
+         @0x000002a89d45f128: f803ca3b49407ffb7027
+relocInfo@0x000002a89d45f130 [type=7(external_word) addr=0x000002a89d45f4c6 offset=39 data={ca3b49407ffb}] | [target=0x00007ffbca3b4940]
+         @0x000002a89d45f132: f803ca0a84287ffb7013
+relocInfo@0x000002a89d45f13a [type=7(external_word) addr=0x000002a89d45f4d9 offset=19 data={ca0a84287ffb}] | [target=0x00007ffbca0a8428]
+         @0x000002a89d45f13c: 600e
+relocInfo@0x000002a89d45f13c [type=6(runtime_call) addr=0x000002a89d45f4e7 offset=14] | [destination=0x00007ffbc9b04f60]
+         @0x000002a89d45f13e: 3428
+relocInfo@0x000002a89d45f13e [type=3(opt_virtual_call) addr=0x000002a89d45f50f offset=40 format=1] | [destination=0x000002a89cdf4120 metadata=0x0000000000000000]
+         @0x000002a89d45f140: f803ca3b49407ffb701b
+relocInfo@0x000002a89d45f148 [type=7(external_word) addr=0x000002a89d45f52a offset=27 data={ca3b49407ffb}] | [target=0x00007ffbca3b4940]
+         @0x000002a89d45f14a: f803ca0a84287ffb7013
+relocInfo@0x000002a89d45f152 [type=7(external_word) addr=0x000002a89d45f53d offset=19 data={ca0a84287ffb}] | [target=0x00007ffbca0a8428]
+         @0x000002a89d45f154: 600e
+relocInfo@0x000002a89d45f154 [type=6(runtime_call) addr=0x000002a89d45f54b offset=14] | [destination=0x00007ffbc9b04f60]
+         @0x000002a89d45f156: c01e
+relocInfo@0x000002a89d45f156 [type=12(metadata) addr=0x000002a89d45f569 offset=30] | [metadata_addr=0x000002a89d45f56b *=0x000000080001fe60 offset=0]metadata_value=0x000000080001fe60: 'sun/nio/cs/HistoricallyNamedCharset'
+         @0x000002a89d45f158: 6432
+relocInfo@0x000002a89d45f158 [type=6(runtime_call) addr=0x000002a89d45f59b offset=50 format=1] | [destination=0x000002a89cd21a20]
+         @0x000002a89d45f15a: c037
+relocInfo@0x000002a89d45f15a [type=12(metadata) addr=0x000002a89d45f5d2 offset=55] | [metadata_addr=0x000002a89d45f5d4 *=0x000000080001fe60 offset=0]metadata_value=0x000000080001fe60: 'sun/nio/cs/HistoricallyNamedCharset'
+         @0x000002a89d45f15c: 6432
+relocInfo@0x000002a89d45f15c [type=6(runtime_call) addr=0x000002a89d45f604 offset=50 format=1] | [destination=0x000002a89cd21a20]
+         @0x000002a89d45f15e: f00a2423
+relocInfo@0x000002a89d45f160 [type=2(virtual_call) addr=0x000002a89d45f627 offset=35 format=1 data=10] | [destination=0x000002a89cdf3e20 cached_value=0x000002a89d45f61d metadata=0x0000000000000000]
+         @0x000002a89d45f162: f803ca3b49407ffb7010
+relocInfo@0x000002a89d45f16a [type=7(external_word) addr=0x000002a89d45f637 offset=16 data={ca3b49407ffb}] | [target=0x00007ffbca3b4940]
+         @0x000002a89d45f16c: f803ca0a84287ffb7013
+relocInfo@0x000002a89d45f174 [type=7(external_word) addr=0x000002a89d45f64a offset=19 data={ca0a84287ffb}] | [target=0x00007ffbca0a8428]
+         @0x000002a89d45f176: 600e
+relocInfo@0x000002a89d45f176 [type=6(runtime_call) addr=0x000002a89d45f658 offset=14] | [destination=0x00007ffbc9b04f60]
+         @0x000002a89d45f178: 3427
+relocInfo@0x000002a89d45f178 [type=3(opt_virtual_call) addr=0x000002a89d45f67f offset=39 format=1] | [destination=0x000002a89cdf4120 metadata=0x0000000000000000]
+         @0x000002a89d45f17a: 4428
+relocInfo@0x000002a89d45f17a [type=4(static_call) addr=0x000002a89d45f6a7 offset=40 format=1] | [destination=0x000002a89cdf3b20 metadata=0x0000000000000000]
+         @0x000002a89d45f17c: 4430
+relocInfo@0x000002a89d45f17c [type=4(static_call) addr=0x000002a89d45f6d7 offset=48 format=1] | [destination=0x000002a89cdf3b20 metadata=0x0000000000000000]
+         @0x000002a89d45f17e: 1017
+relocInfo@0x000002a89d45f17e [type=1(oop) addr=0x000002a89d45f6ee offset=23] | [oop_addr=0x000002a89d45f6f0 *=0x0000000000000000 offset=0]
+         @0x000002a89d45f180: 1014
+relocInfo@0x000002a89d45f180 [type=1(oop) addr=0x000002a89d45f702 offset=20] | [oop_addr=0x000002a89d45f704 *=0x0000000000000000 offset=0]
+         @0x000002a89d45f182: 100f
+relocInfo@0x000002a89d45f182 [type=1(oop) addr=0x000002a89d45f711 offset=15] | [oop_addr=0x000002a89d45f713 *=0x000000072fd12a40 offset=0]
+         @0x000002a89d45f184: 1013
+relocInfo@0x000002a89d45f184 [type=1(oop) addr=0x000002a89d45f724 offset=19] | [oop_addr=0x000002a89d45f726 *=0x000000072fd12b40 offset=0]
+         @0x000002a89d45f186: 1013
+relocInfo@0x000002a89d45f186 [type=1(oop) addr=0x000002a89d45f737 offset=19] | [oop_addr=0x000002a89d45f739 *=0x000000072fd12df0 offset=0]
+         @0x000002a89d45f188: c013
+relocInfo@0x000002a89d45f188 [type=12(metadata) addr=0x000002a89d45f74a offset=19] | [metadata_addr=0x000002a89d45f74c *=0x0000000800025150 offset=0]metadata_value=0x0000000800025150: 'java/lang/StringCoding$StringDecoder'
+         @0x000002a89d45f18a: 346d
+relocInfo@0x000002a89d45f18a [type=3(opt_virtual_call) addr=0x000002a89d45f7b7 offset=109 format=1] | [destination=0x000002a89cdf4120 metadata=0x0000000000000000]
+         @0x000002a89d45f18c: 4430
+relocInfo@0x000002a89d45f18c [type=4(static_call) addr=0x000002a89d45f7e7 offset=48 format=1] | [destination=0x000002a89cdf3b20 metadata=0x0000000000000000]
+         @0x000002a89d45f18e: b014
+relocInfo@0x000002a89d45f18e [type=11(poll_return) addr=0x000002a89d45f7fb offset=20]
+         @0x000002a89d45f190: 441c
+relocInfo@0x000002a89d45f190 [type=4(static_call) addr=0x000002a89d45f817 offset=28 format=1] | [destination=0x000002a89cdf3b20 metadata=0x0000000000000000]
+         @0x000002a89d45f192: b014
+relocInfo@0x000002a89d45f192 [type=11(poll_return) addr=0x000002a89d45f82b offset=20]
+         @0x000002a89d45f194: 4424
+relocInfo@0x000002a89d45f194 [type=4(static_call) addr=0x000002a89d45f84f offset=36 format=1] | [destination=0x000002a89cdf3b20 metadata=0x0000000000000000]
+         @0x000002a89d45f196: b014
+relocInfo@0x000002a89d45f196 [type=11(poll_return) addr=0x000002a89d45f863 offset=20]
+         @0x000002a89d45f198: 0005
+relocInfo@0x000002a89d45f198 [type=0(none) addr=0x000002a89d45f868 offset=5]
+         @0x000002a89d45f19a: 3427
+relocInfo@0x000002a89d45f19a [type=3(opt_virtual_call) addr=0x000002a89d45f88f offset=39 format=1] | [destination=0x000002a89cdf4120 metadata=0x0000000000000000]
+         @0x000002a89d45f19c: f801eb91900d
+relocInfo@0x000002a89d45f1a0 [type=9(section_word) addr=0x000002a89d45f89c offset=13 data=-5231] | [target=0x000002a89d45f89c]
+         @0x000002a89d45f1a2: 640a
+relocInfo@0x000002a89d45f1a2 [type=6(runtime_call) addr=0x000002a89d45f8a6 offset=10 format=1] | [destination=0x000002a89cd22dc0]
+         @0x000002a89d45f1a4: 002a
+relocInfo@0x000002a89d45f1a4 [type=0(none) addr=0x000002a89d45f8d0 offset=42]
+         @0x000002a89d45f1a6: 346f
+relocInfo@0x000002a89d45f1a6 [type=3(opt_virtual_call) addr=0x000002a89d45f93f offset=111 format=1] | [destination=0x000002a89cdf4120 metadata=0x0000000000000000]
+         @0x000002a89d45f1a8: f801e8d1900d
+relocInfo@0x000002a89d45f1ac [type=9(section_word) addr=0x000002a89d45f94c offset=13 data=-5935] | [target=0x000002a89d45f94c]
+         @0x000002a89d45f1ae: 640a
+relocInfo@0x000002a89d45f1ae [type=6(runtime_call) addr=0x000002a89d45f956 offset=10 format=1] | [destination=0x000002a89cd22dc0]
+         @0x000002a89d45f1b0: 1021
+relocInfo@0x000002a89d45f1b0 [type=1(oop) addr=0x000002a89d45f977 offset=33] | [oop_addr=0x000002a89d45f979 *=0x0000000000000000 offset=0]
+         @0x000002a89d45f1b2: c014
+relocInfo@0x000002a89d45f1b2 [type=12(metadata) addr=0x000002a89d45f98b offset=20] | [metadata_addr=0x000002a89d45f98d *=0x0000000800005cb8 offset=0]metadata_value=0x0000000800005cb8: 'java/lang/ref/SoftReference'
+         @0x000002a89d45f1b4: 1064
+relocInfo@0x000002a89d45f1b4 [type=1(oop) addr=0x000002a89d45f9ef offset=100] | [oop_addr=0x000002a89d45f9f1 *=0x0000000000000000 offset=0]
+         @0x000002a89d45f1b6: 3420
+relocInfo@0x000002a89d45f1b6 [type=3(opt_virtual_call) addr=0x000002a89d45fa0f offset=32 format=1] | [destination=0x000002a89cdf4120 metadata=0x0000000000000000]
+         @0x000002a89d45f1b8: 1005
+relocInfo@0x000002a89d45f1b8 [type=1(oop) addr=0x000002a89d45fa14 offset=5] | [oop_addr=0x000002a89d45fa16 *=0x000000072fd019e0 offset=0]
+         @0x000002a89d45f1ba: f803ca3b49407ffb7027
+relocInfo@0x000002a89d45f1c2 [type=7(external_word) addr=0x000002a89d45fa3b offset=39 data={ca3b49407ffb}] | [target=0x00007ffbca3b4940]
+         @0x000002a89d45f1c4: f803ca0a84287ffb7013
+relocInfo@0x000002a89d45f1cc [type=7(external_word) addr=0x000002a89d45fa4e offset=19 data={ca0a84287ffb}] | [target=0x00007ffbca0a8428]
+         @0x000002a89d45f1ce: 600e
+relocInfo@0x000002a89d45f1ce [type=6(runtime_call) addr=0x000002a89d45fa5c offset=14] | [destination=0x00007ffbc9b04f60]
+         @0x000002a89d45f1d0: 1021
+relocInfo@0x000002a89d45f1d0 [type=1(oop) addr=0x000002a89d45fa7d offset=33] | [oop_addr=0x000002a89d45fa7f *=0x000000072fd318b8 offset=0]
+         @0x000002a89d45f1d2: 3412
+relocInfo@0x000002a89d45f1d2 [type=3(opt_virtual_call) addr=0x000002a89d45fa8f offset=18 format=1] | [destination=0x000002a89cdf4120 metadata=0x0000000000000000]
+         @0x000002a89d45f1d4: c012
+relocInfo@0x000002a89d45f1d4 [type=12(metadata) addr=0x000002a89d45faa1 offset=18] | [metadata_addr=0x000002a89d45faa3 *=0x0000000800024470 offset=0]metadata_value=0x0000000800024470: 'java/lang/ThreadLocal$ThreadLocalMap'
+         @0x000002a89d45f1d6: 1056
+relocInfo@0x000002a89d45f1d6 [type=1(oop) addr=0x000002a89d45faf7 offset=86] | [oop_addr=0x000002a89d45faf9 *=0x000000072fd318b8 offset=0]
+         @0x000002a89d45f1d8: 3418
+relocInfo@0x000002a89d45f1d8 [type=3(opt_virtual_call) addr=0x000002a89d45fb0f offset=24 format=1] | [destination=0x000002a89cdf4120 metadata=0x0000000000000000]
+         @0x000002a89d45f1da: f803ca3b49407ffb7029
+relocInfo@0x000002a89d45f1e2 [type=7(external_word) addr=0x000002a89d45fb38 offset=41 data={ca3b49407ffb}] | [target=0x00007ffbca3b4940]
+         @0x000002a89d45f1e4: f803ca0a82287ffb7013
+relocInfo@0x000002a89d45f1ec [type=7(external_word) addr=0x000002a89d45fb4b offset=19 data={ca0a82287ffb}] | [target=0x00007ffbca0a8228]
+         @0x000002a89d45f1ee: 600e
+relocInfo@0x000002a89d45f1ee [type=6(runtime_call) addr=0x000002a89d45fb59 offset=14] | [destination=0x00007ffbc9b04f60]
+         @0x000002a89d45f1f0: 3456
+relocInfo@0x000002a89d45f1f0 [type=3(opt_virtual_call) addr=0x000002a89d45fbaf offset=86 format=1] | [destination=0x000002a89cdf4120 metadata=0x0000000000000000]
+         @0x000002a89d45f1f2: b014
+relocInfo@0x000002a89d45f1f2 [type=11(poll_return) addr=0x000002a89d45fbc3 offset=20]
+         @0x000002a89d45f1f4: 000d
+relocInfo@0x000002a89d45f1f4 [type=0(none) addr=0x000002a89d45fbd0 offset=13]
+         @0x000002a89d45f1f6: 341f
+relocInfo@0x000002a89d45f1f6 [type=3(opt_virtual_call) addr=0x000002a89d45fbef offset=31 format=1] | [destination=0x000002a89cdf4120 metadata=0x0000000000000000]
+         @0x000002a89d45f1f8: c012
+relocInfo@0x000002a89d45f1f8 [type=12(metadata) addr=0x000002a89d45fc01 offset=18] | [metadata_addr=0x000002a89d45fc03 *=0x000002a8b7c250c0 offset=0]metadata_value=0x000002a8b7c250c0: {method} {0x000002a8b7c250c8} 'decode' '(Ljava/lang/String;[BII)Ljava/lang/StringCoding$Result;' in 'java/lang/StringCoding'
+         @0x000002a89d45f1fa: 6417
+relocInfo@0x000002a89d45f1fa [type=6(runtime_call) addr=0x000002a89d45fc18 offset=23 format=1] | [destination=0x000002a89cd1e740]
+         @0x000002a89d45f1fc: 640e
+relocInfo@0x000002a89d45f1fc [type=6(runtime_call) addr=0x000002a89d45fc26 offset=14 format=1] | [destination=0x000002a89cd22040]
+         @0x000002a89d45f1fe: f803c9f5e0807ffb7005
+relocInfo@0x000002a89d45f206 [type=7(external_word) addr=0x000002a89d45fc2b offset=5 data={c9f5e0807ffb}] | [target=0x00007ffbc9f5e080]
+         @0x000002a89d45f208: 600e
+relocInfo@0x000002a89d45f208 [type=6(runtime_call) addr=0x000002a89d45fc39 offset=14] | [destination=0x00007ffbc9b04f60]
+         @0x000002a89d45f20a: 6412
+relocInfo@0x000002a89d45f20a [type=6(runtime_call) addr=0x000002a89d45fc4b offset=18 format=1] | [destination=0x000002a89cd22040]
+         @0x000002a89d45f20c: f803c9f5e0807ffb7005
+relocInfo@0x000002a89d45f214 [type=7(external_word) addr=0x000002a89d45fc50 offset=5 data={c9f5e0807ffb}] | [target=0x00007ffbc9f5e080]
+         @0x000002a89d45f216: 600e
+relocInfo@0x000002a89d45f216 [type=6(runtime_call) addr=0x000002a89d45fc5e offset=14] | [destination=0x00007ffbc9b04f60]
+         @0x000002a89d45f218: 640e
+relocInfo@0x000002a89d45f218 [type=6(runtime_call) addr=0x000002a89d45fc6c offset=14 format=1] | [destination=0x000002a89cd24d40]
+         @0x000002a89d45f21a: f803c9f5e0807ffb7005
+relocInfo@0x000002a89d45f222 [type=7(external_word) addr=0x000002a89d45fc71 offset=5 data={c9f5e0807ffb}] | [target=0x00007ffbc9f5e080]
+         @0x000002a89d45f224: 600e
+relocInfo@0x000002a89d45f224 [type=6(runtime_call) addr=0x000002a89d45fc7f offset=14] | [destination=0x00007ffbc9b04f60]
+         @0x000002a89d45f226: 640e
+relocInfo@0x000002a89d45f226 [type=6(runtime_call) addr=0x000002a89d45fc8d offset=14 format=1] | [destination=0x000002a89cd24d40]
+         @0x000002a89d45f228: f803c9f5e0807ffb7005
+relocInfo@0x000002a89d45f230 [type=7(external_word) addr=0x000002a89d45fc92 offset=5 data={c9f5e0807ffb}] | [target=0x00007ffbc9f5e080]
+         @0x000002a89d45f232: 600e
+relocInfo@0x000002a89d45f232 [type=6(runtime_call) addr=0x000002a89d45fca0 offset=14] | [destination=0x00007ffbc9b04f60]
+         @0x000002a89d45f234: 6412
+relocInfo@0x000002a89d45f234 [type=6(runtime_call) addr=0x000002a89d45fcb2 offset=18 format=1] | [destination=0x000002a89cd22040]
+         @0x000002a89d45f236: f803c9f5e0807ffb7005
+relocInfo@0x000002a89d45f23e [type=7(external_word) addr=0x000002a89d45fcb7 offset=5 data={c9f5e0807ffb}] | [target=0x00007ffbc9f5e080]
+         @0x000002a89d45f240: 600e
+relocInfo@0x000002a89d45f240 [type=6(runtime_call) addr=0x000002a89d45fcc5 offset=14] | [destination=0x00007ffbc9b04f60]
+         @0x000002a89d45f242: 640e
+relocInfo@0x000002a89d45f242 [type=6(runtime_call) addr=0x000002a89d45fcd3 offset=14 format=1] | [destination=0x000002a89cd24d40]
+         @0x000002a89d45f244: f803c9f5e0807ffb7005
+relocInfo@0x000002a89d45f24c [type=7(external_word) addr=0x000002a89d45fcd8 offset=5 data={c9f5e0807ffb}] | [target=0x00007ffbc9f5e080]
+         @0x000002a89d45f24e: 600e
+relocInfo@0x000002a89d45f24e [type=6(runtime_call) addr=0x000002a89d45fce6 offset=14] | [destination=0x00007ffbc9b04f60]
+         @0x000002a89d45f250: 6411
+relocInfo@0x000002a89d45f250 [type=6(runtime_call) addr=0x000002a89d45fcf7 offset=17 format=1] | [destination=0x000002a89cd24140]
+         @0x000002a89d45f252: c00a
+relocInfo@0x000002a89d45f252 [type=12(metadata) addr=0x000002a89d45fd01 offset=10] | [metadata_addr=0x000002a89d45fd03 *=0x0000000000000000 offset=0]
+         @0x000002a89d45f254: 640f
+relocInfo@0x000002a89d45f254 [type=6(runtime_call) addr=0x000002a89d45fd10 offset=15 format=1] | [destination=0x000002a89cd1fb60]
+         @0x000002a89d45f256: 640d
+relocInfo@0x000002a89d45f256 [type=6(runtime_call) addr=0x000002a89d45fd1d offset=13 format=1] | [destination=0x000002a89cd24540]
+         @0x000002a89d45f258: c00a
+relocInfo@0x000002a89d45f258 [type=12(metadata) addr=0x000002a89d45fd27 offset=10] | [metadata_addr=0x000002a89d45fd29 *=0x0000000000000000 offset=0]
+         @0x000002a89d45f25a: 640f
+relocInfo@0x000002a89d45f25a [type=6(runtime_call) addr=0x000002a89d45fd36 offset=15 format=1] | [destination=0x000002a89cd1fb60]
+         @0x000002a89d45f25c: 640d
+relocInfo@0x000002a89d45f25c [type=6(runtime_call) addr=0x000002a89d45fd43 offset=13 format=1] | [destination=0x000002a89cd24140]
+         @0x000002a89d45f25e: 640d
+relocInfo@0x000002a89d45f25e [type=6(runtime_call) addr=0x000002a89d45fd50 offset=13 format=1] | [destination=0x000002a89cd24140]
+         @0x000002a89d45f260: 640a
+relocInfo@0x000002a89d45f260 [type=6(runtime_call) addr=0x000002a89d45fd5a offset=10 format=1] | [destination=0x000002a89cd24d40]
+         @0x000002a89d45f262: f803c9f5e0807ffb7005
+relocInfo@0x000002a89d45f26a [type=7(external_word) addr=0x000002a89d45fd5f offset=5 data={c9f5e0807ffb}] | [target=0x00007ffbc9f5e080]
+         @0x000002a89d45f26c: 600e
+relocInfo@0x000002a89d45f26c [type=6(runtime_call) addr=0x000002a89d45fd6d offset=14] | [destination=0x00007ffbc9b04f60]
+         @0x000002a89d45f26e: 640e
+relocInfo@0x000002a89d45f26e [type=6(runtime_call) addr=0x000002a89d45fd7b offset=14 format=1] | [destination=0x000002a89cd24d40]
+         @0x000002a89d45f270: f803c9f5e0807ffb7005
+relocInfo@0x000002a89d45f278 [type=7(external_word) addr=0x000002a89d45fd80 offset=5 data={c9f5e0807ffb}] | [target=0x00007ffbc9f5e080]
+         @0x000002a89d45f27a: 600e
+relocInfo@0x000002a89d45f27a [type=6(runtime_call) addr=0x000002a89d45fd8e offset=14] | [destination=0x00007ffbc9b04f60]
+         @0x000002a89d45f27c: 6411
+relocInfo@0x000002a89d45f27c [type=6(runtime_call) addr=0x000002a89d45fd9f offset=17 format=1] | [destination=0x000002a89cd24140]
+         @0x000002a89d45f27e: f803ca3b49407ffb7010
+relocInfo@0x000002a89d45f286 [type=7(external_word) addr=0x000002a89d45fdaf offset=16 data={ca3b49407ffb}] | [target=0x00007ffbca3b4940]
+         @0x000002a89d45f288: f803ca0a84287ffb7013
+relocInfo@0x000002a89d45f290 [type=7(external_word) addr=0x000002a89d45fdc2 offset=19 data={ca0a84287ffb}] | [target=0x00007ffbca0a8428]
+         @0x000002a89d45f292: 600e
+relocInfo@0x000002a89d45f292 [type=6(runtime_call) addr=0x000002a89d45fdd0 offset=14] | [destination=0x00007ffbc9b04f60]
+         @0x000002a89d45f294: 6422
+relocInfo@0x000002a89d45f294 [type=6(runtime_call) addr=0x000002a89d45fdf2 offset=34 format=1] | [destination=0x000002a89cd1e020]
+         @0x000002a89d45f296: 6418
+relocInfo@0x000002a89d45f296 [type=6(runtime_call) addr=0x000002a89d45fe0a offset=24 format=1] | [destination=0x000002a89cd1dca0]
+         @0x000002a89d45f298: 640a
+relocInfo@0x000002a89d45f298 [type=6(runtime_call) addr=0x000002a89d45fe14 offset=10 format=1] | [destination=0x000002a89cd24d40]
+         @0x000002a89d45f29a: f803c9f5e0807ffb7005
+relocInfo@0x000002a89d45f2a2 [type=7(external_word) addr=0x000002a89d45fe19 offset=5 data={c9f5e0807ffb}] | [target=0x00007ffbc9f5e080]
+         @0x000002a89d45f2a4: 600e
+relocInfo@0x000002a89d45f2a4 [type=6(runtime_call) addr=0x000002a89d45fe27 offset=14] | [destination=0x00007ffbc9b04f60]
+         @0x000002a89d45f2a6: c00e
+relocInfo@0x000002a89d45f2a6 [type=12(metadata) addr=0x000002a89d45fe35 offset=14] | [metadata_addr=0x000002a89d45fe37 *=0x0000000000000000 offset=0]
+         @0x000002a89d45f2a8: 640f
+relocInfo@0x000002a89d45f2a8 [type=6(runtime_call) addr=0x000002a89d45fe44 offset=15 format=1] | [destination=0x000002a89cd1fb60]
+         @0x000002a89d45f2aa: 640d
+relocInfo@0x000002a89d45f2aa [type=6(runtime_call) addr=0x000002a89d45fe51 offset=13 format=1] | [destination=0x000002a89cd24540]
+         @0x000002a89d45f2ac: 643d
+relocInfo@0x000002a89d45f2ac [type=6(runtime_call) addr=0x000002a89d45fe8e offset=61 format=1] | [destination=0x000002a89cd26040]
+         @0x000002a89d45f2ae: 0012
+relocInfo@0x000002a89d45f2ae [type=0(none) addr=0x000002a89d45fea0 offset=18]
+         @0x000002a89d45f2b0: f801ffa15005
+relocInfo@0x000002a89d45f2b4 [type=5(static_stub) addr=0x000002a89d45fea5 offset=5 data=-95] | [static_call=0x000002a89d45f3df]
+         @0x000002a89d45f2b6: c000
+relocInfo@0x000002a89d45f2b6 [type=12(metadata) addr=0x000002a89d45fea5 offset=0] | [metadata_addr=0x000002a89d45fea7 *=0x0000000000000000 offset=0]
+         @0x000002a89d45f2b8: 640a
+relocInfo@0x000002a89d45f2b8 [type=6(runtime_call) addr=0x000002a89d45feaf offset=10 format=1] | [destination=0xffffffffffffffff]
+         @0x000002a89d45f2ba: f801ff435006
+relocInfo@0x000002a89d45f2be [type=5(static_stub) addr=0x000002a89d45feb5 offset=6 data=-189] | [static_call=0x000002a89d45f43d]
+         @0x000002a89d45f2c0: c000
+relocInfo@0x000002a89d45f2c0 [type=12(metadata) addr=0x000002a89d45feb5 offset=0] | [metadata_addr=0x000002a89d45feb7 *=0x0000000000000000 offset=0]
+         @0x000002a89d45f2c2: 640a
+relocInfo@0x000002a89d45f2c2 [type=6(runtime_call) addr=0x000002a89d45febf offset=10 format=1] | [destination=0xffffffffffffffff]
+         @0x000002a89d45f2c4: f801fe715006
+relocInfo@0x000002a89d45f2c8 [type=5(static_stub) addr=0x000002a89d45fec5 offset=6 data=-399] | [static_call=0x000002a89d45f50f]
+         @0x000002a89d45f2ca: c000
+relocInfo@0x000002a89d45f2ca [type=12(metadata) addr=0x000002a89d45fec5 offset=0] | [metadata_addr=0x000002a89d45fec7 *=0x0000000000000000 offset=0]
+         @0x000002a89d45f2cc: 640a
+relocInfo@0x000002a89d45f2cc [type=6(runtime_call) addr=0x000002a89d45fecf offset=10 format=1] | [destination=0xffffffffffffffff]
+         @0x000002a89d45f2ce: f801fd635006
+relocInfo@0x000002a89d45f2d2 [type=5(static_stub) addr=0x000002a89d45fed5 offset=6 data=-669] | [static_call=0x000002a89d45f61d]
+         @0x000002a89d45f2d4: c000
+relocInfo@0x000002a89d45f2d4 [type=12(metadata) addr=0x000002a89d45fed5 offset=0] | [metadata_addr=0x000002a89d45fed7 *=0x0000000000000000 offset=0]
+         @0x000002a89d45f2d6: 640a
+relocInfo@0x000002a89d45f2d6 [type=6(runtime_call) addr=0x000002a89d45fedf offset=10 format=1] | [destination=0xffffffffffffffff]
+         @0x000002a89d45f2d8: f801fd015006
+relocInfo@0x000002a89d45f2dc [type=5(static_stub) addr=0x000002a89d45fee5 offset=6 data=-767] | [static_call=0x000002a89d45f67f]
+         @0x000002a89d45f2de: c000
+relocInfo@0x000002a89d45f2de [type=12(metadata) addr=0x000002a89d45fee5 offset=0] | [metadata_addr=0x000002a89d45fee7 *=0x0000000000000000 offset=0]
+         @0x000002a89d45f2e0: 640a
+relocInfo@0x000002a89d45f2e0 [type=6(runtime_call) addr=0x000002a89d45feef offset=10 format=1] | [destination=0xffffffffffffffff]
+         @0x000002a89d45f2e2: f801fcd95006
+relocInfo@0x000002a89d45f2e6 [type=5(static_stub) addr=0x000002a89d45fef5 offset=6 data=-807] | [static_call=0x000002a89d45f6a7]
+         @0x000002a89d45f2e8: c000
+relocInfo@0x000002a89d45f2e8 [type=12(metadata) addr=0x000002a89d45fef5 offset=0] | [metadata_addr=0x000002a89d45fef7 *=0x0000000000000000 offset=0]
+         @0x000002a89d45f2ea: 640a
+relocInfo@0x000002a89d45f2ea [type=6(runtime_call) addr=0x000002a89d45feff offset=10 format=1] | [destination=0xffffffffffffffff]
+         @0x000002a89d45f2ec: f801fca95006
+relocInfo@0x000002a89d45f2f0 [type=5(static_stub) addr=0x000002a89d45ff05 offset=6 data=-855] | [static_call=0x000002a89d45f6d7]
+         @0x000002a89d45f2f2: c000
+relocInfo@0x000002a89d45f2f2 [type=12(metadata) addr=0x000002a89d45ff05 offset=0] | [metadata_addr=0x000002a89d45ff07 *=0x0000000000000000 offset=0]
+         @0x000002a89d45f2f4: 640a
+relocInfo@0x000002a89d45f2f4 [type=6(runtime_call) addr=0x000002a89d45ff0f offset=10 format=1] | [destination=0xffffffffffffffff]
+         @0x000002a89d45f2f6: f801fbc95006
+relocInfo@0x000002a89d45f2fa [type=5(static_stub) addr=0x000002a89d45ff15 offset=6 data=-1079] | [static_call=0x000002a89d45f7b7]
+         @0x000002a89d45f2fc: c000
+relocInfo@0x000002a89d45f2fc [type=12(metadata) addr=0x000002a89d45ff15 offset=0] | [metadata_addr=0x000002a89d45ff17 *=0x0000000000000000 offset=0]
+         @0x000002a89d45f2fe: 640a
+relocInfo@0x000002a89d45f2fe [type=6(runtime_call) addr=0x000002a89d45ff1f offset=10 format=1] | [destination=0xffffffffffffffff]
+         @0x000002a89d45f300: f801fb995006
+relocInfo@0x000002a89d45f304 [type=5(static_stub) addr=0x000002a89d45ff25 offset=6 data=-1127] | [static_call=0x000002a89d45f7e7]
+         @0x000002a89d45f306: c000
+relocInfo@0x000002a89d45f306 [type=12(metadata) addr=0x000002a89d45ff25 offset=0] | [metadata_addr=0x000002a89d45ff27 *=0x0000000000000000 offset=0]
+         @0x000002a89d45f308: 640a
+relocInfo@0x000002a89d45f308 [type=6(runtime_call) addr=0x000002a89d45ff2f offset=10 format=1] | [destination=0xffffffffffffffff]
+         @0x000002a89d45f30a: f801fb695006
+relocInfo@0x000002a89d45f30e [type=5(static_stub) addr=0x000002a89d45ff35 offset=6 data=-1175] | [static_call=0x000002a89d45f817]
+         @0x000002a89d45f310: c000
+relocInfo@0x000002a89d45f310 [type=12(metadata) addr=0x000002a89d45ff35 offset=0] | [metadata_addr=0x000002a89d45ff37 *=0x0000000000000000 offset=0]
+         @0x000002a89d45f312: 640a
+relocInfo@0x000002a89d45f312 [type=6(runtime_call) addr=0x000002a89d45ff3f offset=10 format=1] | [destination=0xffffffffffffffff]
+         @0x000002a89d45f314: f801fb315006
+relocInfo@0x000002a89d45f318 [type=5(static_stub) addr=0x000002a89d45ff45 offset=6 data=-1231] | [static_call=0x000002a89d45f84f]
+         @0x000002a89d45f31a: c000
+relocInfo@0x000002a89d45f31a [type=12(metadata) addr=0x000002a89d45ff45 offset=0] | [metadata_addr=0x000002a89d45ff47 *=0x0000000000000000 offset=0]
+         @0x000002a89d45f31c: 640a
+relocInfo@0x000002a89d45f31c [type=6(runtime_call) addr=0x000002a89d45ff4f offset=10 format=1] | [destination=0xffffffffffffffff]
+         @0x000002a89d45f31e: f801faf15006
+relocInfo@0x000002a89d45f322 [type=5(static_stub) addr=0x000002a89d45ff55 offset=6 data=-1295] | [static_call=0x000002a89d45f88f]
+         @0x000002a89d45f324: c000
+relocInfo@0x000002a89d45f324 [type=12(metadata) addr=0x000002a89d45ff55 offset=0] | [metadata_addr=0x000002a89d45ff57 *=0x0000000000000000 offset=0]
+         @0x000002a89d45f326: 640a
+relocInfo@0x000002a89d45f326 [type=6(runtime_call) addr=0x000002a89d45ff5f offset=10 format=1] | [destination=0xffffffffffffffff]
+         @0x000002a89d45f328: f801fa415006
+relocInfo@0x000002a89d45f32c [type=5(static_stub) addr=0x000002a89d45ff65 offset=6 data=-1471] | [static_call=0x000002a89d45f93f]
+         @0x000002a89d45f32e: c000
+relocInfo@0x000002a89d45f32e [type=12(metadata) addr=0x000002a89d45ff65 offset=0] | [metadata_addr=0x000002a89d45ff67 *=0x0000000000000000 offset=0]
+         @0x000002a89d45f330: 640a
+relocInfo@0x000002a89d45f330 [type=6(runtime_call) addr=0x000002a89d45ff6f offset=10 format=1] | [destination=0xffffffffffffffff]
+         @0x000002a89d45f332: f801f9715006
+relocInfo@0x000002a89d45f336 [type=5(static_stub) addr=0x000002a89d45ff75 offset=6 data=-1679] | [static_call=0x000002a89d45fa0f]
+         @0x000002a89d45f338: c000
+relocInfo@0x000002a89d45f338 [type=12(metadata) addr=0x000002a89d45ff75 offset=0] | [metadata_addr=0x000002a89d45ff77 *=0x0000000000000000 offset=0]
+         @0x000002a89d45f33a: 640a
+relocInfo@0x000002a89d45f33a [type=6(runtime_call) addr=0x000002a89d45ff7f offset=10 format=1] | [destination=0xffffffffffffffff]
+         @0x000002a89d45f33c: f801f8f15006
+relocInfo@0x000002a89d45f340 [type=5(static_stub) addr=0x000002a89d45ff85 offset=6 data=-1807] | [static_call=0x000002a89d45fa8f]
+         @0x000002a89d45f342: c000
+relocInfo@0x000002a89d45f342 [type=12(metadata) addr=0x000002a89d45ff85 offset=0] | [metadata_addr=0x000002a89d45ff87 *=0x0000000000000000 offset=0]
+         @0x000002a89d45f344: 640a
+relocInfo@0x000002a89d45f344 [type=6(runtime_call) addr=0x000002a89d45ff8f offset=10 format=1] | [destination=0xffffffffffffffff]
+         @0x000002a89d45f346: f801f8715006
+relocInfo@0x000002a89d45f34a [type=5(static_stub) addr=0x000002a89d45ff95 offset=6 data=-1935] | [static_call=0x000002a89d45fb0f]
+         @0x000002a89d45f34c: c000
+relocInfo@0x000002a89d45f34c [type=12(metadata) addr=0x000002a89d45ff95 offset=0] | [metadata_addr=0x000002a89d45ff97 *=0x0000000000000000 offset=0]
+         @0x000002a89d45f34e: 640a
+relocInfo@0x000002a89d45f34e [type=6(runtime_call) addr=0x000002a89d45ff9f offset=10 format=1] | [destination=0xffffffffffffffff]
+         @0x000002a89d45f350: f801f7d15006
+relocInfo@0x000002a89d45f354 [type=5(static_stub) addr=0x000002a89d45ffa5 offset=6 data=-2095] | [static_call=0x000002a89d45fbaf]
+         @0x000002a89d45f356: c000
+relocInfo@0x000002a89d45f356 [type=12(metadata) addr=0x000002a89d45ffa5 offset=0] | [metadata_addr=0x000002a89d45ffa7 *=0x0000000000000000 offset=0]
+         @0x000002a89d45f358: 640a
+relocInfo@0x000002a89d45f358 [type=6(runtime_call) addr=0x000002a89d45ffaf offset=10 format=1] | [destination=0xffffffffffffffff]
+         @0x000002a89d45f35a: f801f7915006
+relocInfo@0x000002a89d45f35e [type=5(static_stub) addr=0x000002a89d45ffb5 offset=6 data=-2159] | [static_call=0x000002a89d45fbef]
+         @0x000002a89d45f360: c000
+relocInfo@0x000002a89d45f360 [type=12(metadata) addr=0x000002a89d45ffb5 offset=0] | [metadata_addr=0x000002a89d45ffb7 *=0x0000000000000000 offset=0]
+         @0x000002a89d45f362: 640a
+relocInfo@0x000002a89d45f362 [type=6(runtime_call) addr=0x000002a89d45ffbf offset=10 format=1] | [destination=0xffffffffffffffff]
+         @0x000002a89d45f364: 642d
+relocInfo@0x000002a89d45f364 [type=6(runtime_call) addr=0x000002a89d45ffec offset=45 format=1] | [destination=0x000002a89cd22640]
+         @0x000002a89d45f366: f803c9f5e0807ffb7005
+relocInfo@0x000002a89d45f36e [type=7(external_word) addr=0x000002a89d45fff1 offset=5 data={c9f5e0807ffb}] | [target=0x00007ffbc9f5e080]
+         @0x000002a89d45f370: 600e
+relocInfo@0x000002a89d45f370 [type=6(runtime_call) addr=0x000002a89d45ffff offset=14] | [destination=0x00007ffbc9b04f60]
+         @0x000002a89d45f372: f801fa4e900e
+relocInfo@0x000002a89d45f376 [type=9(section_word) addr=0x000002a89d46000d offset=14 data=-1458] | [target=0x000002a89d46000d]
+         @0x000002a89d45f378: 640c
+relocInfo@0x000002a89d45f378 [type=6(runtime_call) addr=0x000002a89d460019 offset=12 format=1] | [destination=0x000002a89cdf3440]
+         @0x000002a89d45f37a: 0000
+relocInfo@0x000002a89d45f37a [type=0(none) addr=0x000002a89d460019 offset=0]
+         @0x000002a89d45f37c: 0000
+relocInfo@0x000002a89d45f37c [type=0(none) addr=0x000002a89d460019 offset=0]
+         @0x000002a89d45f37e: 0000
+relocInfo@0x000002a89d45f37e [type=0(none) addr=0x000002a89d460019 offset=0]
+         @0x000002a89d45f380: 
+Compiled method (c1)     589  132       3       java.lang.StringBuilder::append (10 bytes)
+ total in heap  [0x000002a89d460e10,0x000002a89d461438] = 1576
+ relocation     [0x000002a89d460f98,0x000002a89d461000] = 104
+ main code      [0x000002a89d461000,0x000002a89d4611e0] = 480
+ stub code      [0x000002a89d4611e0,0x000002a89d461270] = 144
+ metadata       [0x000002a89d461270,0x000002a89d461280] = 16
+ scopes data    [0x000002a89d461280,0x000002a89d461340] = 192
+ scopes pcs     [0x000002a89d461340,0x000002a89d461420] = 224
+ dependencies   [0x000002a89d461420,0x000002a89d461428] = 8
+ nul chk table  [0x000002a89d461428,0x000002a89d461438] = 16
+relocations:
+         @0x000002a89d460f98: 6017
+relocInfo@0x000002a89d460f98 [type=6(runtime_call) addr=0x000002a89d461017 offset=23] | [destination=0x000002a89cdf4420]
+         @0x000002a89d460f9a: c01d
+relocInfo@0x000002a89d460f9a [type=12(metadata) addr=0x000002a89d461034 offset=29] | [metadata_addr=0x000002a89d461036 *=0x000002a8b7f07578 offset=0]metadata_value=0x000002a8b7f07578: method data for {method} {0x000002a8b7b20fb8} 'append' '([CII)Ljava/lang/StringBuilder;' in 'java/lang/StringBuilder'
+         @0x000002a89d460f9c: c021
+relocInfo@0x000002a89d460f9c [type=12(metadata) addr=0x000002a89d461055 offset=33] | [metadata_addr=0x000002a89d461057 *=0x000002a8b7f07578 offset=0]metadata_value=0x000002a8b7f07578: method data for {method} {0x000002a8b7b20fb8} 'append' '([CII)Ljava/lang/StringBuilder;' in 'java/lang/StringBuilder'
+         @0x000002a89d460f9e: c012
+relocInfo@0x000002a89d460f9e [type=12(metadata) addr=0x000002a89d461067 offset=18] | [metadata_addr=0x000002a89d461069 *=0x000002a8b7f07730 offset=0]metadata_value=0x000002a8b7f07730: method data for {method} {0x000002a8b7b1bee0} 'append' '([CII)Ljava/lang/AbstractStringBuilder;' in 'java/lang/AbstractStringBuilder'
+         @0x000002a89d460fa0: c02c
+relocInfo@0x000002a89d460fa0 [type=12(metadata) addr=0x000002a89d461093 offset=44] | [metadata_addr=0x000002a89d461095 *=0x000002a8b7f07730 offset=0]metadata_value=0x000002a8b7f07730: method data for {method} {0x000002a8b7b1bee0} 'append' '([CII)Ljava/lang/AbstractStringBuilder;' in 'java/lang/AbstractStringBuilder'
+         @0x000002a89d460fa2: 4434
+relocInfo@0x000002a89d460fa2 [type=4(static_call) addr=0x000002a89d4610c7 offset=52 format=1] | [destination=0x000002a89cdf3b20 metadata=0x0000000000000000]
+         @0x000002a89d460fa4: c011
+relocInfo@0x000002a89d460fa4 [type=12(metadata) addr=0x000002a89d4610d8 offset=17] | [metadata_addr=0x000002a89d4610da *=0x000002a8b7f07730 offset=0]metadata_value=0x000002a8b7f07730: method data for {method} {0x000002a8b7b1bee0} 'append' '([CII)Ljava/lang/AbstractStringBuilder;' in 'java/lang/AbstractStringBuilder'
+         @0x000002a89d460fa6: 341f
+relocInfo@0x000002a89d460fa6 [type=3(opt_virtual_call) addr=0x000002a89d4610f7 offset=31 format=1] | [destination=0x000002a89cdf4120 metadata=0x0000000000000000]
+         @0x000002a89d460fa8: c00a
+relocInfo@0x000002a89d460fa8 [type=12(metadata) addr=0x000002a89d461101 offset=10] | [metadata_addr=0x000002a89d461103 *=0x000002a8b7f07730 offset=0]metadata_value=0x000002a8b7f07730: method data for {method} {0x000002a8b7b1bee0} 'append' '([CII)Ljava/lang/AbstractStringBuilder;' in 'java/lang/AbstractStringBuilder'
+         @0x000002a89d460faa: 3426
+relocInfo@0x000002a89d460faa [type=3(opt_virtual_call) addr=0x000002a89d461127 offset=38 format=1] | [destination=0x000002a89cdf4120 metadata=0x0000000000000000]
+         @0x000002a89d460fac: b019
+relocInfo@0x000002a89d460fac [type=11(poll_return) addr=0x000002a89d461140 offset=25]
+         @0x000002a89d460fae: c004
+relocInfo@0x000002a89d460fae [type=12(metadata) addr=0x000002a89d461144 offset=4] | [metadata_addr=0x000002a89d461146 *=0x000002a8b7b20fb0 offset=0]metadata_value=0x000002a8b7b20fb0: {method} {0x000002a8b7b20fb8} 'append' '([CII)Ljava/lang/StringBuilder;' in 'java/lang/StringBuilder'
+         @0x000002a89d460fb0: 6417
+relocInfo@0x000002a89d460fb0 [type=6(runtime_call) addr=0x000002a89d46115b offset=23 format=1] | [destination=0x000002a89cd1e740]
+         @0x000002a89d460fb2: c00a
+relocInfo@0x000002a89d460fb2 [type=12(metadata) addr=0x000002a89d461165 offset=10] | [metadata_addr=0x000002a89d461167 *=0x000002a8b7b1bed8 offset=0]metadata_value=0x000002a8b7b1bed8: {method} {0x000002a8b7b1bee0} 'append' '([CII)Ljava/lang/AbstractStringBuilder;' in 'java/lang/AbstractStringBuilder'
+         @0x000002a89d460fb4: 6417
+relocInfo@0x000002a89d460fb4 [type=6(runtime_call) addr=0x000002a89d46117c offset=23 format=1] | [destination=0x000002a89cd1e740]
+         @0x000002a89d460fb6: 640a
+relocInfo@0x000002a89d460fb6 [type=6(runtime_call) addr=0x000002a89d461186 offset=10 format=1] | [destination=0x000002a89cd24d40]
+         @0x000002a89d460fb8: f803c9f5e0807ffb7005
+relocInfo@0x000002a89d460fc0 [type=7(external_word) addr=0x000002a89d46118b offset=5 data={c9f5e0807ffb}] | [target=0x00007ffbc9f5e080]
+         @0x000002a89d460fc2: 600e
+relocInfo@0x000002a89d460fc2 [type=6(runtime_call) addr=0x000002a89d461199 offset=14] | [destination=0x00007ffbc9b04f60]
+         @0x000002a89d460fc4: 6441
+relocInfo@0x000002a89d460fc4 [type=6(runtime_call) addr=0x000002a89d4611da offset=65 format=1] | [destination=0x000002a89cd26040]
+         @0x000002a89d460fc6: 0006
+relocInfo@0x000002a89d460fc6 [type=0(none) addr=0x000002a89d4611e0 offset=6]
+         @0x000002a89d460fc8: f801ff395005
+relocInfo@0x000002a89d460fcc [type=5(static_stub) addr=0x000002a89d4611e5 offset=5 data=-199] | [static_call=0x000002a89d4610c7]
+         @0x000002a89d460fce: c000
+relocInfo@0x000002a89d460fce [type=12(metadata) addr=0x000002a89d4611e5 offset=0] | [metadata_addr=0x000002a89d4611e7 *=0x0000000000000000 offset=0]
+         @0x000002a89d460fd0: 640a
+relocInfo@0x000002a89d460fd0 [type=6(runtime_call) addr=0x000002a89d4611ef offset=10 format=1] | [destination=0xffffffffffffffff]
+         @0x000002a89d460fd2: f801ff095006
+relocInfo@0x000002a89d460fd6 [type=5(static_stub) addr=0x000002a89d4611f5 offset=6 data=-247] | [static_call=0x000002a89d4610f7]
+         @0x000002a89d460fd8: c000
+relocInfo@0x000002a89d460fd8 [type=12(metadata) addr=0x000002a89d4611f5 offset=0] | [metadata_addr=0x000002a89d4611f7 *=0x0000000000000000 offset=0]
+         @0x000002a89d460fda: 640a
+relocInfo@0x000002a89d460fda [type=6(runtime_call) addr=0x000002a89d4611ff offset=10 format=1] | [destination=0xffffffffffffffff]
+         @0x000002a89d460fdc: f801fed95006
+relocInfo@0x000002a89d460fe0 [type=5(static_stub) addr=0x000002a89d461205 offset=6 data=-295] | [static_call=0x000002a89d461127]
+         @0x000002a89d460fe2: c000
+relocInfo@0x000002a89d460fe2 [type=12(metadata) addr=0x000002a89d461205 offset=0] | [metadata_addr=0x000002a89d461207 *=0x0000000000000000 offset=0]
+         @0x000002a89d460fe4: 640a
+relocInfo@0x000002a89d460fe4 [type=6(runtime_call) addr=0x000002a89d46120f offset=10 format=1] | [destination=0xffffffffffffffff]
+         @0x000002a89d460fe6: 642d
+relocInfo@0x000002a89d460fe6 [type=6(runtime_call) addr=0x000002a89d46123c offset=45 format=1] | [destination=0x000002a89cd22640]
+         @0x000002a89d460fe8: f803c9f5e0807ffb7005
+relocInfo@0x000002a89d460ff0 [type=7(external_word) addr=0x000002a89d461241 offset=5 data={c9f5e0807ffb}] | [target=0x00007ffbc9f5e080]
+         @0x000002a89d460ff2: 600e
+relocInfo@0x000002a89d460ff2 [type=6(runtime_call) addr=0x000002a89d46124f offset=14] | [destination=0x00007ffbc9b04f60]
+         @0x000002a89d460ff4: f801fe0e900e
+relocInfo@0x000002a89d460ff8 [type=9(section_word) addr=0x000002a89d46125d offset=14 data=-498] | [target=0x000002a89d46125d]
+         @0x000002a89d460ffa: 640c
+relocInfo@0x000002a89d460ffa [type=6(runtime_call) addr=0x000002a89d461269 offset=12 format=1] | [destination=0x000002a89cdf3440]
+         @0x000002a89d460ffc: 0000
+relocInfo@0x000002a89d460ffc [type=0(none) addr=0x000002a89d461269 offset=0]
+         @0x000002a89d460ffe: 0000
+relocInfo@0x000002a89d460ffe [type=0(none) addr=0x000002a89d461269 offset=0]
+         @0x000002a89d461000: 
+Compiled method (c2)     592  133       4       java.lang.StringBuilder::append (10 bytes)
+ total in heap  [0x000002a8a4891190,0x000002a8a4891460] = 720
+ relocation     [0x000002a8a4891318,0x000002a8a4891330] = 24
+ main code      [0x000002a8a4891340,0x000002a8a48913a0] = 96
+ stub code      [0x000002a8a48913a0,0x000002a8a48913c8] = 40
+ metadata       [0x000002a8a48913c8,0x000002a8a48913d0] = 8
+ scopes data    [0x000002a8a48913d0,0x000002a8a48913f0] = 32
+ scopes pcs     [0x000002a8a48913f0,0x000002a8a4891440] = 80
+ dependencies   [0x000002a8a4891440,0x000002a8a4891448] = 8
+ handler table  [0x000002a8a4891448,0x000002a8a4891460] = 24
+relocations:
+         @0x000002a8a4891318: 6017
+relocInfo@0x000002a8a4891318 [type=6(runtime_call) addr=0x000002a8a4891357 offset=23] | [destination=0x000002a89cdf4420]
+         @0x000002a8a489131a: 3418
+relocInfo@0x000002a8a489131a [type=3(opt_virtual_call) addr=0x000002a8a489136f offset=24 format=1] | [destination=0x000002a89cdf4120 metadata=0x0000000000000000]
+         @0x000002a8a489131c: b014
+relocInfo@0x000002a8a489131c [type=11(poll_return) addr=0x000002a8a4891383 offset=20]
+         @0x000002a8a489131e: 640c
+relocInfo@0x000002a8a489131e [type=6(runtime_call) addr=0x000002a8a489138f offset=12 format=1] | [destination=0x000002a89cd18a20]
+         @0x000002a8a4891320: 0011
+relocInfo@0x000002a8a4891320 [type=0(none) addr=0x000002a8a48913a0 offset=17]
+         @0x000002a8a4891322: f801ffd15000
+relocInfo@0x000002a8a4891326 [type=5(static_stub) addr=0x000002a8a48913a0 offset=0 data=-47] | [static_call=0x000002a8a489136f]
+         @0x000002a8a4891328: c000
+relocInfo@0x000002a8a4891328 [type=12(metadata) addr=0x000002a8a48913a0 offset=0] | [metadata_addr=0x000002a8a48913a2 *=0x0000000000000000 offset=0]
+         @0x000002a8a489132a: 640a
+relocInfo@0x000002a8a489132a [type=6(runtime_call) addr=0x000002a8a48913aa offset=10 format=1] | [destination=0xffffffffffffffff]
+         @0x000002a8a489132c: 6405
+relocInfo@0x000002a8a489132c [type=6(runtime_call) addr=0x000002a8a48913af offset=5 format=1] | [destination=0x000002a89cd25920]
+         @0x000002a8a489132e: 640f
+relocInfo@0x000002a8a489132e [type=6(runtime_call) addr=0x000002a8a48913be offset=15 format=1] | [destination=0x000002a89cdf3440]
+         @0x000002a8a4891330: 
+----------System.err:(1/16)----------
+STATUS:Passed.
+----------rerun:(27/2125)*----------
+cd 'D:\\repository\\jtreg\\build\\images\\jtreg\\lib\\JTwork\\scratch' && \\
+SystemDrive=C: \\
+SystemRoot='C:\\WINDOWS' \\
+TEMP='C:\\Users\\xzf\\AppData\\Local\\Temp' \\
+TMP='C:\\Users\\xzf\\AppData\\Local\\Temp' \\
+windir='C:\\WINDOWS' \\
+CLASSPATH='D:\\repository\\jtreg\\build\\images\\jtreg\\lib\\JTwork\\classes\\compiler\\relocations\\TestPrintRelocations.d;D:\\repository\\jdk11u\\test\\hotspot\\jtreg\\compiler\\relocations;D:\\repository\\jtreg\\build\\images\\jtreg\\lib\\javatest.jar;D:\\repository\\jtreg\\build\\images\\jtreg\\lib\\jtreg.jar' \\
+    'D:\\repository\\jdk11u\\build\\windows-x86_64-normal-server-fastdebug\\images\\jdk\\bin\\java' \\
+        -Dtest.vm.opts= \\
+        -Dtest.tool.vm.opts= \\
+        -Dtest.compiler.opts= \\
+        -Dtest.java.opts= \\
+        -Dtest.jdk='D:\\repository\\jdk11u\\build\\windows-x86_64-normal-server-fastdebug\\images\\jdk' \\
+        -Dcompile.jdk='D:\\repository\\jdk11u\\build\\windows-x86_64-normal-server-fastdebug\\images\\jdk' \\
+        -Dtest.timeout.factor=1.0 \\
+        -Dtest.root='D:\\repository\\jdk11u\\test\\hotspot\\jtreg' \\
+        -Dtest.name=compiler/relocations/TestPrintRelocations.java \\
+        -Dtest.file='D:\\repository\\jdk11u\\test\\hotspot\\jtreg\\compiler\\relocations\\TestPrintRelocations.java' \\
+        -Dtest.src='D:\\repository\\jdk11u\\test\\hotspot\\jtreg\\compiler\\relocations' \\
+        -Dtest.src.path='D:\\repository\\jdk11u\\test\\hotspot\\jtreg\\compiler\\relocations' \\
+        -Dtest.classes='D:\\repository\\jtreg\\build\\images\\jtreg\\lib\\JTwork\\classes\\compiler\\relocations\\TestPrintRelocations.d' \\
+        -Dtest.class.path='D:\\repository\\jtreg\\build\\images\\jtreg\\lib\\JTwork\\classes\\compiler\\relocations\\TestPrintRelocations.d' \\
+        -XX:+IgnoreUnrecognizedVMOptions \\
+        -Xcomp \\
+        -XX:CompileCommand=compileonly,java.lang.String*::* \\
+        -XX:+PrintRelocations \\
+        com.sun.javatest.regtest.agent.MainWrapper 'D:\\repository\\jtreg\\build\\images\\jtreg\\lib\\JTwork\\compiler\\relocations\\TestPrintRelocations.d\\main.0.jta'
+result: Passed. Execution successful
+
+
+test result: Passed. Execution successful

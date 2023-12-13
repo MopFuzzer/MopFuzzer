@@ -1,0 +1,353 @@
+#Test Results (version 2)
+#Thu Jun 08 14:55:47 CST 2023
+#-----testdescription-----
+$file=D\:\\repository\\jdk11u\\test\\hotspot\\jtreg\\compiler\\intrinsics\\bmi\\verifycode\\AndnTestI.java
+$root=D\:\\repository\\jdk11u\\test\\hotspot\\jtreg
+keywords=bug8031321 othervm driver
+library=/test/lib /
+modules=java.base/jdk.internal.misc java.management
+requires=vm.flavor \=\= "server" & \!vm.emulatedClient & \!vm.graal.enabled
+run=USER_SPECIFIED build sun.hotspot.WhiteBox\r\nUSER_SPECIFIED driver ClassFileInstaller sun.hotspot.WhiteBox sun.hotspot.WhiteBox$WhiteBoxPermission\r\nUSER_SPECIFIED main/bootclasspath/othervm -Xbatch -XX\:+UnlockDiagnosticVMOptions -XX\:+WhiteBoxAPI -XX\:+IgnoreUnrecognizedVMOptions -XX\:+UseBMI1Instructions compiler.intrinsics.bmi.verifycode.AndnTestI\r\n
+source=AndnTestI.java
+title=\ 
+
+#-----environment-----
+
+#-----testresult-----
+description=file\:/D\:/repository/jdk11u/test/hotspot/jtreg/compiler/intrinsics/bmi/verifycode/AndnTestI.java
+elapsed=10419 0\:00\:10.419
+end=Thu Jun 08 14\:55\:47 CST 2023
+environment=regtest
+execStatus=Passed. Execution successful
+harnessLoaderMode=Classpath Loader
+harnessVariety=Full Bundle
+hostname=xzffff-XiaoXinPro16
+javatestOS=Windows 11 10.0 (amd64)
+javatestVersion=6.0-ea+b24-2023-06-07-${BUILT_FROM_COMMIT}
+jtregVersion=jtreg 7.3 dev 0
+modules=java.base/jdk.internal.misc java.management
+script=com.sun.javatest.regtest.exec.RegressionScript
+sections=script_messages build compile build compile driver build compile main
+start=Thu Jun 08 14\:55\:36 CST 2023
+test=compiler/intrinsics/bmi/verifycode/AndnTestI.java
+testJDK=D\:\\repository\\jdk11u\\build\\windows-x86_64-normal-server-fastdebug\\images\\jdk
+testJDK_OS=[name\:Windows 11,arch\:amd64,version\:10.0,family\:windows,simple_arch\:x64,simple_version\:10.0,processors\:16,maxMemory\:14894297088,maxSwap\:24557973504]
+testJDK_os.arch=amd64
+testJDK_os.name=Windows 11
+testJDK_os.version=10.0
+totalTime=10424
+user.name=xzf
+work=D\:\\repository\\jtreg\\build\\images\\jtreg\\lib\\JTwork\\compiler\\intrinsics\\bmi\\verifycode
+
+#section:script_messages
+----------messages:(10/690)*----------
+JDK under test: D:\\repository\\jdk11u\\build\\windows-x86_64-normal-server-fastdebug\\images\\jdk
+openjdk version "11.0.20-internal" 2023-07-18
+OpenJDK Runtime Environment (fastdebug build 11.0.20-internal+0-adhoc.xzf.jdk11u)
+OpenJDK 64-Bit Server VM (fastdebug build 11.0.20-internal+0-adhoc.xzf.jdk11u, mixed mode)
+Library /test/lib; kind: packages
+   source directory: D:\\repository\\jdk11u\\test\\lib
+   class directory: D:\\repository\\jtreg\\build\\images\\jtreg\\lib\\JTwork\\classes\\test\\lib
+Library /; kind: packages
+   source directory: D:\\repository\\jdk11u\\test\\hotspot\\jtreg
+   class directory: D:\\repository\\jtreg\\build\\images\\jtreg\\lib\\JTwork\\classes
+
+#section:build
+----------messages:(7/264)----------
+command: build sun.hotspot.WhiteBox
+reason: User specified action: run build sun.hotspot.WhiteBox 
+started: Thu Jun 08 14:55:37 CST 2023
+Library /test/lib:
+  compile: sun.hotspot.WhiteBox
+finished: Thu Jun 08 14:55:39 CST 2023
+elapsed time (seconds): 2.422
+result: Passed. Build successful
+
+#section:compile
+----------messages:(7/386)*----------
+command: compile D:\\repository\\jdk11u\\test\\lib\\sun\\hotspot\\WhiteBox.java
+reason: .class file out of date or does not exist
+started: Thu Jun 08 14:55:37 CST 2023
+Additional options from @modules: --add-modules java.base,java.management --add-exports java.base/jdk.internal.misc=ALL-UNNAMED
+Mode: othervm
+finished: Thu Jun 08 14:55:39 CST 2023
+elapsed time (seconds): 2.415
+----------configuration:(8/424)*----------
+javac compilation environment
+  add modules: java.base java.management   
+  add exports: java.base/jdk.internal.misc ALL-UNNAMED
+  source path: D:\\repository\\jdk11u\\test\\lib 
+               D:\\repository\\jdk11u\\test\\hotspot\\jtreg 
+  class path:  D:\\repository\\jtreg\\build\\images\\jtreg\\lib\\JTwork\\classes\\test\\lib 
+               D:\\repository\\jtreg\\build\\images\\jtreg\\lib\\JTwork\\classes 
+
+----------rerun:(23/1985)*----------
+cd 'D:\\repository\\jtreg\\build\\images\\jtreg\\lib\\JTwork\\scratch' && \\
+SystemDrive=C: \\
+SystemRoot='C:\\WINDOWS' \\
+TEMP='C:\\Users\\xzf\\AppData\\Local\\Temp' \\
+TMP='C:\\Users\\xzf\\AppData\\Local\\Temp' \\
+windir='C:\\WINDOWS' \\
+    'D:\\repository\\jdk11u\\build\\windows-x86_64-normal-server-fastdebug\\images\\jdk\\bin\\javac' \\
+        -J-Dtest.vm.opts= \\
+        -J-Dtest.tool.vm.opts= \\
+        -J-Dtest.compiler.opts= \\
+        -J-Dtest.java.opts= \\
+        -J-Dtest.jdk='D:\\repository\\jdk11u\\build\\windows-x86_64-normal-server-fastdebug\\images\\jdk' \\
+        -J-Dcompile.jdk='D:\\repository\\jdk11u\\build\\windows-x86_64-normal-server-fastdebug\\images\\jdk' \\
+        -J-Dtest.timeout.factor=1.0 \\
+        -J-Dtest.root='D:\\repository\\jdk11u\\test\\hotspot\\jtreg' \\
+        -J-Dtest.name=compiler/intrinsics/bmi/verifycode/AndnTestI.java \\
+        -J-Dtest.file='D:\\repository\\jdk11u\\test\\hotspot\\jtreg\\compiler\\intrinsics\\bmi\\verifycode\\AndnTestI.java' \\
+        -J-Dtest.src='D:\\repository\\jdk11u\\test\\hotspot\\jtreg\\compiler\\intrinsics\\bmi\\verifycode' \\
+        -J-Dtest.src.path='D:\\repository\\jdk11u\\test\\hotspot\\jtreg\\compiler\\intrinsics\\bmi\\verifycode;D:\\repository\\jdk11u\\test\\lib;D:\\repository\\jdk11u\\test\\hotspot\\jtreg' \\
+        -J-Dtest.classes='D:\\repository\\jtreg\\build\\images\\jtreg\\lib\\JTwork\\classes\\compiler\\intrinsics\\bmi\\verifycode\\AndnTestI.d' \\
+        -J-Dtest.class.path='D:\\repository\\jtreg\\build\\images\\jtreg\\lib\\JTwork\\classes\\compiler\\intrinsics\\bmi\\verifycode\\AndnTestI.d;D:\\repository\\jtreg\\build\\images\\jtreg\\lib\\JTwork\\classes\\test\\lib;D:\\repository\\jtreg\\build\\images\\jtreg\\lib\\JTwork\\classes' \\
+        -J-Dtest.modules='java.base/jdk.internal.misc java.management' \\
+        '@D:\\repository\\jtreg\\build\\images\\jtreg\\lib\\JTwork\\compiler\\intrinsics\\bmi\\verifycode\\AndnTestI.d\\compile.0.jta'
+----------System.out:(0/0)----------
+----------System.err:(0/0)----------
+result: Passed. Compilation successful
+
+#section:build
+----------messages:(7/235)----------
+command: build ClassFileInstaller
+reason: Named class compiled on demand
+started: Thu Jun 08 14:55:39 CST 2023
+Library /test/lib:
+  compile: ClassFileInstaller
+finished: Thu Jun 08 14:55:41 CST 2023
+elapsed time (seconds): 2.09
+result: Passed. Build successful
+
+#section:compile
+----------messages:(7/382)*----------
+command: compile D:\\repository\\jdk11u\\test\\lib\\ClassFileInstaller.java
+reason: .class file out of date or does not exist
+started: Thu Jun 08 14:55:39 CST 2023
+Additional options from @modules: --add-modules java.base,java.management --add-exports java.base/jdk.internal.misc=ALL-UNNAMED
+Mode: othervm
+finished: Thu Jun 08 14:55:41 CST 2023
+elapsed time (seconds): 2.089
+----------configuration:(8/424)*----------
+javac compilation environment
+  add modules: java.base java.management   
+  add exports: java.base/jdk.internal.misc ALL-UNNAMED
+  source path: D:\\repository\\jdk11u\\test\\lib 
+               D:\\repository\\jdk11u\\test\\hotspot\\jtreg 
+  class path:  D:\\repository\\jtreg\\build\\images\\jtreg\\lib\\JTwork\\classes\\test\\lib 
+               D:\\repository\\jtreg\\build\\images\\jtreg\\lib\\JTwork\\classes 
+
+----------rerun:(23/1985)*----------
+cd 'D:\\repository\\jtreg\\build\\images\\jtreg\\lib\\JTwork\\scratch' && \\
+SystemDrive=C: \\
+SystemRoot='C:\\WINDOWS' \\
+TEMP='C:\\Users\\xzf\\AppData\\Local\\Temp' \\
+TMP='C:\\Users\\xzf\\AppData\\Local\\Temp' \\
+windir='C:\\WINDOWS' \\
+    'D:\\repository\\jdk11u\\build\\windows-x86_64-normal-server-fastdebug\\images\\jdk\\bin\\javac' \\
+        -J-Dtest.vm.opts= \\
+        -J-Dtest.tool.vm.opts= \\
+        -J-Dtest.compiler.opts= \\
+        -J-Dtest.java.opts= \\
+        -J-Dtest.jdk='D:\\repository\\jdk11u\\build\\windows-x86_64-normal-server-fastdebug\\images\\jdk' \\
+        -J-Dcompile.jdk='D:\\repository\\jdk11u\\build\\windows-x86_64-normal-server-fastdebug\\images\\jdk' \\
+        -J-Dtest.timeout.factor=1.0 \\
+        -J-Dtest.root='D:\\repository\\jdk11u\\test\\hotspot\\jtreg' \\
+        -J-Dtest.name=compiler/intrinsics/bmi/verifycode/AndnTestI.java \\
+        -J-Dtest.file='D:\\repository\\jdk11u\\test\\hotspot\\jtreg\\compiler\\intrinsics\\bmi\\verifycode\\AndnTestI.java' \\
+        -J-Dtest.src='D:\\repository\\jdk11u\\test\\hotspot\\jtreg\\compiler\\intrinsics\\bmi\\verifycode' \\
+        -J-Dtest.src.path='D:\\repository\\jdk11u\\test\\hotspot\\jtreg\\compiler\\intrinsics\\bmi\\verifycode;D:\\repository\\jdk11u\\test\\lib;D:\\repository\\jdk11u\\test\\hotspot\\jtreg' \\
+        -J-Dtest.classes='D:\\repository\\jtreg\\build\\images\\jtreg\\lib\\JTwork\\classes\\compiler\\intrinsics\\bmi\\verifycode\\AndnTestI.d' \\
+        -J-Dtest.class.path='D:\\repository\\jtreg\\build\\images\\jtreg\\lib\\JTwork\\classes\\compiler\\intrinsics\\bmi\\verifycode\\AndnTestI.d;D:\\repository\\jtreg\\build\\images\\jtreg\\lib\\JTwork\\classes\\test\\lib;D:\\repository\\jtreg\\build\\images\\jtreg\\lib\\JTwork\\classes' \\
+        -J-Dtest.modules='java.base/jdk.internal.misc java.management' \\
+        '@D:\\repository\\jtreg\\build\\images\\jtreg\\lib\\JTwork\\compiler\\intrinsics\\bmi\\verifycode\\AndnTestI.d\\compile.1.jta'
+----------System.out:(0/0)----------
+----------System.err:(0/0)----------
+result: Passed. Compilation successful
+
+#section:driver
+----------messages:(7/475)----------
+command: driver ClassFileInstaller sun.hotspot.WhiteBox sun.hotspot.WhiteBox$WhiteBoxPermission
+reason: User specified action: run driver ClassFileInstaller sun.hotspot.WhiteBox sun.hotspot.WhiteBox$WhiteBoxPermission 
+started: Thu Jun 08 14:55:41 CST 2023
+Mode: othervm
+Additional options from @modules: --add-modules java.base,java.management --add-exports java.base/jdk.internal.misc=ALL-UNNAMED
+finished: Thu Jun 08 14:55:41 CST 2023
+elapsed time (seconds): 0.403
+----------configuration:(4/115)----------
+Boot Layer
+  add modules: java.base java.management   
+  add exports: java.base/jdk.internal.misc ALL-UNNAMED
+
+----------System.out:(0/0)----------
+----------System.err:(1/16)----------
+STATUS:Passed.
+----------rerun:(26/2621)*----------
+cd 'D:\\repository\\jtreg\\build\\images\\jtreg\\lib\\JTwork\\scratch' && \\
+SystemDrive=C: \\
+SystemRoot='C:\\WINDOWS' \\
+TEMP='C:\\Users\\xzf\\AppData\\Local\\Temp' \\
+TMP='C:\\Users\\xzf\\AppData\\Local\\Temp' \\
+windir='C:\\WINDOWS' \\
+CLASSPATH='D:\\repository\\jdk11u\\test\\hotspot\\jtreg\\compiler\\intrinsics\\bmi\\verifycode;D:\\repository\\jtreg\\build\\images\\jtreg\\lib\\JTwork\\classes\\test\\lib;D:\\repository\\jdk11u\\test\\lib;D:\\repository\\jtreg\\build\\images\\jtreg\\lib\\JTwork\\classes;D:\\repository\\jdk11u\\test\\hotspot\\jtreg;D:\\repository\\jtreg\\build\\images\\jtreg\\lib\\javatest.jar;D:\\repository\\jtreg\\build\\images\\jtreg\\lib\\jtreg.jar' \\
+    'D:\\repository\\jdk11u\\build\\windows-x86_64-normal-server-fastdebug\\images\\jdk\\bin\\java' \\
+        -Dtest.vm.opts= \\
+        -Dtest.tool.vm.opts= \\
+        -Dtest.compiler.opts= \\
+        -Dtest.java.opts= \\
+        -Dtest.jdk='D:\\repository\\jdk11u\\build\\windows-x86_64-normal-server-fastdebug\\images\\jdk' \\
+        -Dcompile.jdk='D:\\repository\\jdk11u\\build\\windows-x86_64-normal-server-fastdebug\\images\\jdk' \\
+        -Dtest.timeout.factor=1.0 \\
+        -Dtest.root='D:\\repository\\jdk11u\\test\\hotspot\\jtreg' \\
+        -Dtest.name=compiler/intrinsics/bmi/verifycode/AndnTestI.java \\
+        -Dtest.file='D:\\repository\\jdk11u\\test\\hotspot\\jtreg\\compiler\\intrinsics\\bmi\\verifycode\\AndnTestI.java' \\
+        -Dtest.src='D:\\repository\\jdk11u\\test\\hotspot\\jtreg\\compiler\\intrinsics\\bmi\\verifycode' \\
+        -Dtest.src.path='D:\\repository\\jdk11u\\test\\hotspot\\jtreg\\compiler\\intrinsics\\bmi\\verifycode;D:\\repository\\jdk11u\\test\\lib;D:\\repository\\jdk11u\\test\\hotspot\\jtreg' \\
+        -Dtest.classes='D:\\repository\\jtreg\\build\\images\\jtreg\\lib\\JTwork\\classes\\compiler\\intrinsics\\bmi\\verifycode\\AndnTestI.d' \\
+        -Dtest.class.path='D:\\repository\\jtreg\\build\\images\\jtreg\\lib\\JTwork\\classes\\compiler\\intrinsics\\bmi\\verifycode\\AndnTestI.d;D:\\repository\\jtreg\\build\\images\\jtreg\\lib\\JTwork\\classes\\test\\lib;D:\\repository\\jtreg\\build\\images\\jtreg\\lib\\JTwork\\classes' \\
+        -Dtest.modules='java.base/jdk.internal.misc java.management' \\
+        --add-modules java.base,java.management \\
+        --add-exports java.base/jdk.internal.misc=ALL-UNNAMED \\
+        com.sun.javatest.regtest.agent.MainWrapper 'D:\\repository\\jtreg\\build\\images\\jtreg\\lib\\JTwork\\compiler\\intrinsics\\bmi\\verifycode\\AndnTestI.d\\driver.2.jta' sun.hotspot.WhiteBox 'sun.hotspot.WhiteBox$WhiteBoxPermission'
+result: Passed. Execution successful
+
+#section:build
+----------messages:(7/284)----------
+command: build compiler.intrinsics.bmi.verifycode.AndnTestI
+reason: Named class compiled on demand
+started: Thu Jun 08 14:55:41 CST 2023
+Test directory:
+  compile: compiler.intrinsics.bmi.verifycode.AndnTestI
+finished: Thu Jun 08 14:55:46 CST 2023
+elapsed time (seconds): 4.58
+result: Passed. Build successful
+
+#section:compile
+----------messages:(7/423)*----------
+command: compile D:\\repository\\jdk11u\\test\\hotspot\\jtreg\\compiler\\intrinsics\\bmi\\verifycode\\AndnTestI.java
+reason: .class file out of date or does not exist
+started: Thu Jun 08 14:55:41 CST 2023
+Additional options from @modules: --add-modules java.base,java.management --add-exports java.base/jdk.internal.misc=ALL-UNNAMED
+Mode: othervm
+finished: Thu Jun 08 14:55:46 CST 2023
+elapsed time (seconds): 4.576
+----------configuration:(11/761)*----------
+javac compilation environment
+  add modules: java.base java.management   
+  add exports: java.base/jdk.internal.misc ALL-UNNAMED
+  source path: D:\\repository\\jdk11u\\test\\hotspot\\jtreg\\compiler\\intrinsics\\bmi\\verifycode 
+               D:\\repository\\jdk11u\\test\\lib 
+               D:\\repository\\jdk11u\\test\\hotspot\\jtreg 
+  class path:  D:\\repository\\jdk11u\\test\\hotspot\\jtreg\\compiler\\intrinsics\\bmi\\verifycode 
+               D:\\repository\\jtreg\\build\\images\\jtreg\\lib\\JTwork\\classes\\compiler\\intrinsics\\bmi\\verifycode\\AndnTestI.d 
+               D:\\repository\\jtreg\\build\\images\\jtreg\\lib\\JTwork\\classes\\test\\lib 
+               D:\\repository\\jtreg\\build\\images\\jtreg\\lib\\JTwork\\classes 
+
+----------rerun:(23/1985)*----------
+cd 'D:\\repository\\jtreg\\build\\images\\jtreg\\lib\\JTwork\\scratch' && \\
+SystemDrive=C: \\
+SystemRoot='C:\\WINDOWS' \\
+TEMP='C:\\Users\\xzf\\AppData\\Local\\Temp' \\
+TMP='C:\\Users\\xzf\\AppData\\Local\\Temp' \\
+windir='C:\\WINDOWS' \\
+    'D:\\repository\\jdk11u\\build\\windows-x86_64-normal-server-fastdebug\\images\\jdk\\bin\\javac' \\
+        -J-Dtest.vm.opts= \\
+        -J-Dtest.tool.vm.opts= \\
+        -J-Dtest.compiler.opts= \\
+        -J-Dtest.java.opts= \\
+        -J-Dtest.jdk='D:\\repository\\jdk11u\\build\\windows-x86_64-normal-server-fastdebug\\images\\jdk' \\
+        -J-Dcompile.jdk='D:\\repository\\jdk11u\\build\\windows-x86_64-normal-server-fastdebug\\images\\jdk' \\
+        -J-Dtest.timeout.factor=1.0 \\
+        -J-Dtest.root='D:\\repository\\jdk11u\\test\\hotspot\\jtreg' \\
+        -J-Dtest.name=compiler/intrinsics/bmi/verifycode/AndnTestI.java \\
+        -J-Dtest.file='D:\\repository\\jdk11u\\test\\hotspot\\jtreg\\compiler\\intrinsics\\bmi\\verifycode\\AndnTestI.java' \\
+        -J-Dtest.src='D:\\repository\\jdk11u\\test\\hotspot\\jtreg\\compiler\\intrinsics\\bmi\\verifycode' \\
+        -J-Dtest.src.path='D:\\repository\\jdk11u\\test\\hotspot\\jtreg\\compiler\\intrinsics\\bmi\\verifycode;D:\\repository\\jdk11u\\test\\lib;D:\\repository\\jdk11u\\test\\hotspot\\jtreg' \\
+        -J-Dtest.classes='D:\\repository\\jtreg\\build\\images\\jtreg\\lib\\JTwork\\classes\\compiler\\intrinsics\\bmi\\verifycode\\AndnTestI.d' \\
+        -J-Dtest.class.path='D:\\repository\\jtreg\\build\\images\\jtreg\\lib\\JTwork\\classes\\compiler\\intrinsics\\bmi\\verifycode\\AndnTestI.d;D:\\repository\\jtreg\\build\\images\\jtreg\\lib\\JTwork\\classes\\test\\lib;D:\\repository\\jtreg\\build\\images\\jtreg\\lib\\JTwork\\classes' \\
+        -J-Dtest.modules='java.base/jdk.internal.misc java.management' \\
+        '@D:\\repository\\jtreg\\build\\images\\jtreg\\lib\\JTwork\\compiler\\intrinsics\\bmi\\verifycode\\AndnTestI.d\\compile.3.jta'
+----------System.out:(0/0)----------
+----------System.err:(2/287)*----------
+\u6ce8: D:\\repository\\jdk11u\\test\\hotspot\\jtreg\\compiler\\intrinsics\\bmi\\BMITestRunner.java\u4f7f\u7528\u6216\u8986\u76d6\u4e86\u5df2\u8fc7\u65f6\u7684 API\u3002
+\u6ce8: \u6709\u5173\u8be6\u7ec6\u4fe1\u606f, \u8bf7\u4f7f\u7528 -Xlint:deprecation \u91cd\u65b0\u7f16\u8bd1\u3002
+result: Passed. Compilation successful
+
+#section:main
+----------messages:(7/698)----------
+command: main -Xbatch -XX:+UnlockDiagnosticVMOptions -XX:+WhiteBoxAPI -XX:+IgnoreUnrecognizedVMOptions -XX:+UseBMI1Instructions compiler.intrinsics.bmi.verifycode.AndnTestI
+reason: User specified action: run main/bootclasspath/othervm -Xbatch -XX:+UnlockDiagnosticVMOptions -XX:+WhiteBoxAPI -XX:+IgnoreUnrecognizedVMOptions -XX:+UseBMI1Instructions compiler.intrinsics.bmi.verifycode.AndnTestI 
+started: Thu Jun 08 14:55:46 CST 2023
+Mode: othervm [/bootclasspath specified, /othervm specified]
+Additional options from @modules: --add-modules java.base,java.management --add-exports java.base/jdk.internal.misc=ALL-UNNAMED
+finished: Thu Jun 08 14:55:47 CST 2023
+elapsed time (seconds): 0.678
+----------configuration:(4/115)----------
+Boot Layer
+  add modules: java.base java.management   
+  add exports: java.base/jdk.internal.misc ALL-UNNAMED
+
+----------System.out:(24/2072)----------
+TEST CASE:public int compiler.intrinsics.bmi.TestAndnI$AndnIExpr.intExpr(compiler.intrinsics.bmi.Expr$MemI,compiler.intrinsics.bmi.Expr$MemI)
+public int compiler.intrinsics.bmi.TestAndnI$AndnIExpr.intExpr(compiler.intrinsics.bmi.Expr$MemI,compiler.intrinsics.bmi.Expr$MemI)
+CPU instructions found, PASSED
+TEST CASE:public int compiler.intrinsics.bmi.TestAndnI$AndnIExpr.intExpr(compiler.intrinsics.bmi.Expr$MemI,int)
+public int compiler.intrinsics.bmi.TestAndnI$AndnIExpr.intExpr(compiler.intrinsics.bmi.Expr$MemI,int)
+CPU instructions found, PASSED
+TEST CASE:public int compiler.intrinsics.bmi.TestAndnI$AndnIExpr.intExpr(int,compiler.intrinsics.bmi.Expr$MemI)
+public int compiler.intrinsics.bmi.TestAndnI$AndnIExpr.intExpr(int,compiler.intrinsics.bmi.Expr$MemI)
+CPU instructions found, PASSED
+TEST CASE:public int compiler.intrinsics.bmi.TestAndnI$AndnIExpr.intExpr(int,int)
+public int compiler.intrinsics.bmi.TestAndnI$AndnIExpr.intExpr(int,int)
+CPU instructions found, PASSED
+TEST CASE:public int compiler.intrinsics.bmi.TestAndnI$AndnICommutativeExpr.intExpr(compiler.intrinsics.bmi.Expr$MemI,compiler.intrinsics.bmi.Expr$MemI)
+public int compiler.intrinsics.bmi.TestAndnI$AndnICommutativeExpr.intExpr(compiler.intrinsics.bmi.Expr$MemI,compiler.intrinsics.bmi.Expr$MemI)
+CPU instructions found, PASSED
+TEST CASE:public int compiler.intrinsics.bmi.TestAndnI$AndnICommutativeExpr.intExpr(compiler.intrinsics.bmi.Expr$MemI,int)
+public int compiler.intrinsics.bmi.TestAndnI$AndnICommutativeExpr.intExpr(compiler.intrinsics.bmi.Expr$MemI,int)
+CPU instructions found, PASSED
+TEST CASE:public int compiler.intrinsics.bmi.TestAndnI$AndnICommutativeExpr.intExpr(int,compiler.intrinsics.bmi.Expr$MemI)
+public int compiler.intrinsics.bmi.TestAndnI$AndnICommutativeExpr.intExpr(int,compiler.intrinsics.bmi.Expr$MemI)
+CPU instructions found, PASSED
+TEST CASE:public int compiler.intrinsics.bmi.TestAndnI$AndnICommutativeExpr.intExpr(int,int)
+public int compiler.intrinsics.bmi.TestAndnI$AndnICommutativeExpr.intExpr(int,int)
+CPU instructions found, PASSED
+----------System.err:(1/16)----------
+STATUS:Passed.
+----------rerun:(31/2785)*----------
+cd 'D:\\repository\\jtreg\\build\\images\\jtreg\\lib\\JTwork\\scratch' && \\
+SystemDrive=C: \\
+SystemRoot='C:\\WINDOWS' \\
+TEMP='C:\\Users\\xzf\\AppData\\Local\\Temp' \\
+TMP='C:\\Users\\xzf\\AppData\\Local\\Temp' \\
+windir='C:\\WINDOWS' \\
+    'D:\\repository\\jdk11u\\build\\windows-x86_64-normal-server-fastdebug\\images\\jdk\\bin\\java' \\
+        -Dtest.vm.opts= \\
+        -Dtest.tool.vm.opts= \\
+        -Dtest.compiler.opts= \\
+        -Dtest.java.opts= \\
+        -Dtest.jdk='D:\\repository\\jdk11u\\build\\windows-x86_64-normal-server-fastdebug\\images\\jdk' \\
+        -Dcompile.jdk='D:\\repository\\jdk11u\\build\\windows-x86_64-normal-server-fastdebug\\images\\jdk' \\
+        -Dtest.timeout.factor=1.0 \\
+        -Dtest.root='D:\\repository\\jdk11u\\test\\hotspot\\jtreg' \\
+        -Dtest.name=compiler/intrinsics/bmi/verifycode/AndnTestI.java \\
+        -Dtest.file='D:\\repository\\jdk11u\\test\\hotspot\\jtreg\\compiler\\intrinsics\\bmi\\verifycode\\AndnTestI.java' \\
+        -Dtest.src='D:\\repository\\jdk11u\\test\\hotspot\\jtreg\\compiler\\intrinsics\\bmi\\verifycode' \\
+        -Dtest.src.path='D:\\repository\\jdk11u\\test\\hotspot\\jtreg\\compiler\\intrinsics\\bmi\\verifycode;D:\\repository\\jdk11u\\test\\lib;D:\\repository\\jdk11u\\test\\hotspot\\jtreg' \\
+        -Dtest.classes='D:\\repository\\jtreg\\build\\images\\jtreg\\lib\\JTwork\\classes\\compiler\\intrinsics\\bmi\\verifycode\\AndnTestI.d' \\
+        -Dtest.class.path='D:\\repository\\jtreg\\build\\images\\jtreg\\lib\\JTwork\\classes\\compiler\\intrinsics\\bmi\\verifycode\\AndnTestI.d;D:\\repository\\jtreg\\build\\images\\jtreg\\lib\\JTwork\\classes\\test\\lib;D:\\repository\\jtreg\\build\\images\\jtreg\\lib\\JTwork\\classes' \\
+        -Dtest.modules='java.base/jdk.internal.misc java.management' \\
+        '-Xbootclasspath/a:D:\\repository\\jtreg\\build\\images\\jtreg\\lib\\JTwork\\classes\\compiler\\intrinsics\\bmi\\verifycode\\AndnTestI.d;D:\\repository\\jdk11u\\test\\hotspot\\jtreg\\compiler\\intrinsics\\bmi\\verifycode;D:\\repository\\jtreg\\build\\images\\jtreg\\lib\\JTwork\\classes\\test\\lib;D:\\repository\\jtreg\\build\\images\\jtreg\\lib\\JTwork\\classes;D:\\repository\\jtreg\\build\\images\\jtreg\\lib\\javatest.jar;D:\\repository\\jtreg\\build\\images\\jtreg\\lib\\jtreg.jar' \\
+        --add-modules java.base,java.management \\
+        --add-exports java.base/jdk.internal.misc=ALL-UNNAMED \\
+        -Xbatch \\
+        -XX:+UnlockDiagnosticVMOptions \\
+        -XX:+WhiteBoxAPI \\
+        -XX:+IgnoreUnrecognizedVMOptions \\
+        -XX:+UseBMI1Instructions \\
+        com.sun.javatest.regtest.agent.MainWrapper 'D:\\repository\\jtreg\\build\\images\\jtreg\\lib\\JTwork\\compiler\\intrinsics\\bmi\\verifycode\\AndnTestI.d\\main.4.jta'
+result: Passed. Execution successful
+
+
+test result: Passed. Execution successful

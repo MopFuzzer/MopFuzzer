@@ -1,0 +1,6 @@
+#Last test run info
+#Thu Jun 08 14:55:47 CST 2023
+configName=regtest
+finishTime=1686207347208
+testURLs=compiler/intrinsics/bmi/verifycode/AndnTestI.java
+startTime=1686207336358

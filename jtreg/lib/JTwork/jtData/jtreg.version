@@ -1,0 +1,10 @@
+jtreg 7.3-dev+0
+Installed in D:\repository\jtreg\build\images\jtreg\lib\jtreg.jar
+Running on platform version 11.0.18 from D:\java_tools\jdk-11.0.18.
+Built with Java(TM) 2 SDK, Version 17.0.4.1+1-LTS-2 on ?????? 07, 2023.
+Copyright (c) 1999, 2022, Oracle and/or its affiliates. All rights reserved.
+Use is subject to license terms.
+JT Harness, version 6.0 ea b24 (June 07, 2023)
+Java Assembler Tools, version 7.0 ea b09 (June 07, 2023)
+TestNG: testng-7.3.0.jar, guice-5.1.0.jar, jcommander-1.82.jar
+JUnit: junit-platform-console-standalone-1.9.2.jar

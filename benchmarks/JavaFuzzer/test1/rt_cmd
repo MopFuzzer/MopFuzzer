@@ -1,0 +1,1 @@
+ruby -I/data/xzf/JavaFuzzer/rb /data/xzf/JavaFuzzer/rb/Fuzzer.rb -f /data/xzf/JavaFuzzer/rb/config.yml

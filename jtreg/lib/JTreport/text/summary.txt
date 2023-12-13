@@ -1,0 +1,2 @@
+compiler/intrinsics/bmi/verifycode/AndnTestI.java  Passed. Execution successful
+compiler/relocations/TestPrintRelocations.java     Passed. Execution successful
