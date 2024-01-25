@@ -53,37 +53,59 @@ mvn exec:java -D"--project_path benchmarks/jtreg17/ --target_case compiler.c1.Te
 
 Since unconfirmed bugs cannot be shown in Java Bug System(JBS), we only show the bugs that are confirmed by developers. 
 
-| Bug ID      | Affected Versions | Link                                        |
-| ----------- | ----------------- | ------------------------------------------- |
-| JDK-8312741 | 11                | https://bugs.openjdk.org/browse/JDK-8312741 |
-| JDK-8312438 | 11                | https://bugs.openjdk.org/browse/JDK-8312438 |
-| JDK-8312744 | 22                | https://bugs.openjdk.org/browse/JDK-8312744 |
-| JDK-8312748 | 22                | https://bugs.openjdk.org/browse/JDK-8312748 |
-| JDK-8315916 | 17,20,21,22       | https://bugs.openjdk.org/browse/JDK-8315916 |
-| JDK-8313405 | 17                | https://bugs.openjdk.org/browse/JDK-8313405 |
-| JDK-8313992 | 17                | https://bugs.openjdk.org/browse/JDK-8313992 |
-| JDK-8316862 | 8                 | https://bugs.openjdk.org/browse/JDK-8316862 |
-| JDK-8318291 | 8                 | https://bugs.openjdk.org/browse/JDK-8318291 |
-| JDK-8318886 | 8                 | https://bugs.openjdk.org/browse/JDK-8318886 |
-| JDK-8316863 | 8                 | https://bugs.openjdk.org/browse/JDK-8316863 |
-| JDK-8317504 | 8                 | https://bugs.openjdk.org/browse/JDK-8317504 |
-| JDK-8317506 | 8                 | https://bugs.openjdk.org/browse/JDK-8317506 |
-| JDK-8316864 | 8                 | https://bugs.openjdk.org/browse/JDK-8316864 |
-| JDK-8316950 | 8                 | https://bugs.openjdk.org/browse/JDK-8316950 |
-| JDK-8316951 | 8                 | https://bugs.openjdk.org/browse/JDK-8316951 |
-| JDK-8317299 | 17,20,22          | https://bugs.openjdk.org/browse/JDK-8317299 |
-| JDK-8317823 | 8                 | https://bugs.openjdk.org/browse/JDK-8317823 |
-| JDK-8317865 | 8                 | https://bugs.openjdk.org/browse/JDK-8317865 |
-| JDK-8316865 | 8                 | https://bugs.openjdk.org/browse/JDK-8316865 |
-| JDK-8316866 | 8,11              | https://bugs.openjdk.org/browse/JDK-8316866 |
-| JDK-8316952 | 8                 | https://bugs.openjdk.org/browse/JDK-8316952 |
-| JDK-8317301 | 8                 | https://bugs.openjdk.org/browse/JDK-8317301 |
-| JDK-8316939 | 8                 | https://bugs.openjdk.org/browse/JDK-8316939 |
-| JDK-8317578 | 8,11              | https://bugs.openjdk.org/browse/JDK-8317578 |
-| JDK-8317576 | 8                 | https://bugs.openjdk.org/browse/JDK-8317576 |
-| JDK-8317816 | 8                 | https://bugs.openjdk.org/browse/JDK-8317816 |
-| JDK-8316937 | 8                 | https://bugs.openjdk.org/browse/JDK-8316937 |
-| JDK-8316949 | 8                 | https://bugs.openjdk.org/browse/JDK-8316949 |
-| JDK-8317236 | 8                 | https://bugs.openjdk.org/browse/JDK-8317236 |
-| JDK-8317346 | 8                 | https://bugs.openjdk.org/browse/JDK-8317346 |
+### OpenJDK Bugs
+
+| Bug ID      | Affected Versions         | Link                                        |
+| ----------- | ------------------------- | ------------------------------------------- |
+| JDK-8312741 | 11                        | https://bugs.openjdk.org/browse/JDK-8312741 |
+| JDK-8312438 | 11                        | https://bugs.openjdk.org/browse/JDK-8312438 |
+| JDK-8322743 | 8, 11, 17, 20, 21, 22, 23 | https://bugs.openjdk.org/browse/JDK-8322743 |
+| JDK-8324174 | 8, 11, 17, 21, 22, 23     | https://bugs.openjdk.org/browse/JDK-8324174 |
+| JDK-8312744 | 22                        | https://bugs.openjdk.org/browse/JDK-8312744 |
+| JDK-8312748 | 22                        | https://bugs.openjdk.org/browse/JDK-8312748 |
+| JDK-8315916 | 17,20,21,22               | https://bugs.openjdk.org/browse/JDK-8315916 |
+| JDK-8313405 | 17                        | https://bugs.openjdk.org/browse/JDK-8313405 |
+| JDK-8313992 | 17                        | https://bugs.openjdk.org/browse/JDK-8313992 |
+| JDK-8313405 | 17                        | https://bugs.openjdk.org/browse/JDK-8313405 |
+| JDK-8323507 | 22                        | https://bugs.openjdk.org/browse/JDK-8323507 |
+| JDK-8324339 | 8                         | https://bugs.openjdk.org/browse/JDK-8324339 |
+| JDK-8316862 | 8                         | https://bugs.openjdk.org/browse/JDK-8316862 |
+| JDK-8318291 | 8                         | https://bugs.openjdk.org/browse/JDK-8318291 |
+| JDK-8318886 | 8                         | https://bugs.openjdk.org/browse/JDK-8318886 |
+| JDK-8316863 | 8                         | https://bugs.openjdk.org/browse/JDK-8316863 |
+| JDK-8317504 | 8                         | https://bugs.openjdk.org/browse/JDK-8317504 |
+| JDK-8317506 | 8                         | https://bugs.openjdk.org/browse/JDK-8317506 |
+| JDK-8316864 | 8                         | https://bugs.openjdk.org/browse/JDK-8316864 |
+| JDK-8316950 | 8                         | https://bugs.openjdk.org/browse/JDK-8316950 |
+| JDK-8316951 | 8                         | https://bugs.openjdk.org/browse/JDK-8316951 |
+| JDK-8317299 | 17,20,22                  | https://bugs.openjdk.org/browse/JDK-8317299 |
+| JDK-8317823 | 8                         | https://bugs.openjdk.org/browse/JDK-8317823 |
+| JDK-8317865 | 8                         | https://bugs.openjdk.org/browse/JDK-8317865 |
+| JDK-8316865 | 8                         | https://bugs.openjdk.org/browse/JDK-8316865 |
+| JDK-8316866 | 8,11                      | https://bugs.openjdk.org/browse/JDK-8316866 |
+| JDK-8323686 | 11                        | https://bugs.openjdk.org/browse/JDK-8323686 |
+| JDK-8316952 | 8                         | https://bugs.openjdk.org/browse/JDK-8316952 |
+| JDK-8317301 | 8                         | https://bugs.openjdk.org/browse/JDK-8317301 |
+| JDK-8316939 | 8                         | https://bugs.openjdk.org/browse/JDK-8316939 |
+| JDK-8317578 | 8,11                      | https://bugs.openjdk.org/browse/JDK-8317578 |
+| JDK-8317576 | 8                         | https://bugs.openjdk.org/browse/JDK-8317576 |
+| JDK-8317816 | 8                         | https://bugs.openjdk.org/browse/JDK-8317816 |
+| JDK-8316937 | 8                         | https://bugs.openjdk.org/browse/JDK-8316937 |
+| JDK-8316949 | 8                         | https://bugs.openjdk.org/browse/JDK-8316949 |
+| JDK-8317236 | 8                         | https://bugs.openjdk.org/browse/JDK-8317236 |
+| JDK-8317346 | 8                         | https://bugs.openjdk.org/browse/JDK-8317346 |
+
+### OpenJ9 Bugs
+
+| Issue ID     | Link                                                  |
+| ------------ | ----------------------------------------------------- |
+| Issue #18756 | https://github.com/eclipse-openj9/openj9/issues/18756 |
+| Issue #18765 | https://github.com/eclipse-openj9/openj9/issues/18765 |
+| Issue #18777 | https://github.com/eclipse-openj9/openj9/issues/18777 |
+
+
+
+
+
+
 
