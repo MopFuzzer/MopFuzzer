@@ -49,9 +49,135 @@ The JDK in the environment variable should >= JDK17, and the target test case is
 mvn exec:java -D"--project_path benchmarks/jtreg17/ --target_case compiler.c1.Test8172751 --jdk D:/repository/jdk17u/build/windows-x86_64-server-fastdebug/jdk/bin --jdk_level 17"
 ```
 
+## Show Cases of detected Bugs
+
+<details>
+<summary><b>JDK-8322743</b></summary>
+
+[JDK-8322743: assert(held_monitor_count() == jni_monitor_count())](https://bugs.openjdk.org/browse/JDK-8322743)
+
+```java
+synchronized void write(char[] data, int offset, int length) throws IOException {
+        while (--length >= 0) {
+            synchronized (new Test8267042()) {
+                int var1 = 0;
+                while (var1 < 100000) {
+                    if (var1 == 50000) {
+                        getZeroOnStack(offset);
+                    }
+                    var1++;
+                }
+            }
+            // original code
+            // getZeroOnStack(offset);
+            write(data[offset++]);
+        }
+    }
+```
+
+</details>
+
+
+The cause of this bug lies in improper operations during the Just-In-Time (JIT) compiler's escape analysis and On-Stack Replacement (OSR) transformation. 
+
+This bug involves optimization processes including escape analysis and lock optimization. Specifically, JVM incorrectly identifies certain objects as non-escaping during escape analysis, leading to incorrect handling of these objects' lock states in the On-Stack Replacement (OSR) transformation, which triggers a crash.
+
+<details>
+<summary><b>JDK-8324174</b></summary>
+
+[JDK-8324174: assert(m->is_entered(current)) failed: invariant](https://bugs.openjdk.org/browse/JDK-8324174)
+
+```java
+public class Test {
+
+    public static final int CHUNK = 10000;
+    public static ArrayList<Object> arr = new ArrayList<>();
+
+    public static void main(String[] args) {
+        while (true) {
+            synchronized (Test.class){
+                synchronized (new Test()) {
+                    synchronized (Test.class){
+                        arr.add(new byte[CHUNK]);
+                    }
+                }
+            }
+        }
+    }
+}
+
+```
+
+</details>
+
+
+The cause of this bug is improper handling of nested synchronized locks during the deoptimization process. The bug involves optimization processes related to deoptimization and the maintenance of synchronized locks.
+
+JVM attempts to eliminate nested locks and locks on non-escaping allocations in the C2 compiler optimization behavior, but during deoptimization, it handles the unlocking and relocking sequence improperly (starting from the inner frame instead of the outer frame), leading to a crash during the deoptimization process.
+
+
+
+
+<details>
+<summary><b>OpenJ9 Issue #18756</b></summary>
+
+[Issue #18756 · eclipse-openj9/openj9 (github.com)](https://github.com/eclipse-openj9/openj9/issues/18756)
+
+```java
+public class Test {
+    public static final int N = 400;
+
+    public static long instanceCount = 3L;
+    public static int[] iArrFld = new int[N];
+
+    public void mainTest(String[] strArr1) {
+        for (int i0 = 0; i0 < N; i0++) {
+            Test.iArrFld[i0] = -1;
+        }
+
+        for (int i14 = 343; i14 > 21; --i14) {
+            Test.instanceCount += (i14 ^ Test.instanceCount);
+        }
+
+        for (int i1 = 0; i1 < N; ++i1) {
+            for (int var6 = 0; var6 < 10000; ++var6) { if (var6 == 4) { } }
+
+            int[] tmp = new int[N];
+            for (int i2 = 0; i2 < N; i2++) {
+                tmp[i2] = 9;
+            }
+            Test.iArrFld = tmp;
+
+            for (int i18 = 3; i18 < 63; i18++) {
+                Test.iArrFld[i18 - 1] <<= (int) Test.instanceCount;
+            }
+        }
+
+        long sum = 0;
+        for (int i : Test.iArrFld) {
+            sum += i;
+        }
+        System.out.println("sum: " + sum);
+    }
+
+    public static void main(String[] strArr) {
+        Test _instance = new Test();
+        _instance.mainTest(strArr);
+    }
+}
+```
+</details>
+
+
+
+The cause of this bug is the improper handling of shift operation codes by the JVM during automatic SIMD (Single Instruction, Multiple Data) optimization, leading to behavior inconsistent with Java semantics. This bug involves the optimization process of automatic SIMD optimization. Specifically, the JVM improperly handled the VSHL (Vector Shift Left) operation code during the execution of automatic SIMD optimization.
+
+
 ## Confirmed Bugs
 
-Since unconfirmed bugs cannot be shown in Java Bug System(JBS), we only show the bugs that are confirmed by developers. 
+Since unconfirmed bugs cannot be shown in Java Bug System(JBS), we only show the bugs that are confirmed by developers.
+
+
 
 ### OpenJDK Bugs
 
@@ -64,6 +190,7 @@ Since unconfirmed bugs cannot be shown in Java Bug System(JBS), we only show the
 | JDK-8312744 | 22                        | https://bugs.openjdk.org/browse/JDK-8312744 |
 | JDK-8312748 | 22                        | https://bugs.openjdk.org/browse/JDK-8312748 |
 | JDK-8315916 | 17,20,21,22               | https://bugs.openjdk.org/browse/JDK-8315916 |
+| JDK-8324739 | 17.0.10-oracle            | https://bugs.openjdk.org/browse/JDK-8324739 |
 | JDK-8313405 | 17                        | https://bugs.openjdk.org/browse/JDK-8313405 |
 | JDK-8313992 | 17                        | https://bugs.openjdk.org/browse/JDK-8313992 |
 | JDK-8313405 | 17                        | https://bugs.openjdk.org/browse/JDK-8313405 |
