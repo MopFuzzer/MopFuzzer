@@ -46,7 +46,7 @@ To use MopFuzzer, users should specify the target test case, the path of the deb
 The JDK in the environment variable should >= JDK17, and the target test case is compiler.c1.Test8172751 in benchmarks/jtreg17/
 
 ```
-mvn exec:java -D"--project_path benchmarks/jtreg17/ --target_case compiler.c1.Test8172751 --jdk D:/repository/jdk17u/build/windows-x86_64-server-fastdebug/jdk/bin --jdk_level 17"
+mvn exec:java -D"exec.args=--project_path benchmarks/jtreg17/ --target_case compiler.c1.Test8172751 --jdk D:/repository/jdk17u/build/windows-x86_64-server-fastdebug/jdk/bin --jdk_level 17"
 ```
 
 ## Show Cases of detected Bugs
