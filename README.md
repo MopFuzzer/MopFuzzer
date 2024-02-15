@@ -49,7 +49,7 @@ The JDK in the environment variable should >= JDK17, and the target test case is
 mvn exec:java -D"exec.args=--project_path benchmarks/jtreg17/ --target_case compiler.c1.Test8172751 --jdk D:/repository/jdk17u/build/windows-x86_64-server-fastdebug/jdk/bin --jdk_level 17"
 ```
 
-## Show Cases of detected Bugs
+## Show Cases of Detected Bugs
 
 <details>
 <summary><b>JDK-8322743</b></summary>
@@ -189,12 +189,18 @@ Since unconfirmed bugs cannot be shown in Java Bug System(JBS), we only show the
 | JDK-8324174 | 8, 11, 17, 21, 22, 23     | https://bugs.openjdk.org/browse/JDK-8324174 |
 | JDK-8312744 | 22                        | https://bugs.openjdk.org/browse/JDK-8312744 |
 | JDK-8312748 | 22                        | https://bugs.openjdk.org/browse/JDK-8312748 |
-| JDK-8315916 | 17,20,21,22               | https://bugs.openjdk.org/browse/JDK-8315916 |
-| JDK-8324739 | 17.0.10-oracle            | https://bugs.openjdk.org/browse/JDK-8324739 |
+| JDK-8315916 | 17, 20, 21, 22            | https://bugs.openjdk.org/browse/JDK-8315916 |
+| JDK-8324969 | 17, 21, 23                | https://bugs.openjdk.org/browse/JDK-8324969 |
+| JDK-8325030 | 11, 17, 21, 23            | https://bugs.openjdk.org/browse/JDK-8325030 |
+| JDK-8324739 | 17                        | https://bugs.openjdk.org/browse/JDK-8324739 |
 | JDK-8313405 | 17                        | https://bugs.openjdk.org/browse/JDK-8313405 |
 | JDK-8313992 | 17                        | https://bugs.openjdk.org/browse/JDK-8313992 |
 | JDK-8313405 | 17                        | https://bugs.openjdk.org/browse/JDK-8313405 |
 | JDK-8323507 | 22                        | https://bugs.openjdk.org/browse/JDK-8323507 |
+| JDK-8324855 | 8                         | https://bugs.openjdk.org/browse/JDK-8324855 |
+| JDK-8324892 | 8                         | https://bugs.openjdk.org/browse/JDK-8324892 |
+| JDK-8324853 | 8                         | https://bugs.openjdk.org/browse/JDK-8324853 |
+| JDK-8325523 | 8                         | https://bugs.openjdk.org/browse/JDK-8325523 |
 | JDK-8324339 | 8                         | https://bugs.openjdk.org/browse/JDK-8324339 |
 | JDK-8316862 | 8                         | https://bugs.openjdk.org/browse/JDK-8316862 |
 | JDK-8318291 | 8                         | https://bugs.openjdk.org/browse/JDK-8318291 |
@@ -205,22 +211,23 @@ Since unconfirmed bugs cannot be shown in Java Bug System(JBS), we only show the
 | JDK-8316864 | 8                         | https://bugs.openjdk.org/browse/JDK-8316864 |
 | JDK-8316950 | 8                         | https://bugs.openjdk.org/browse/JDK-8316950 |
 | JDK-8316951 | 8                         | https://bugs.openjdk.org/browse/JDK-8316951 |
-| JDK-8317299 | 17,20,22                  | https://bugs.openjdk.org/browse/JDK-8317299 |
+| JDK-8317299 | 17, 20, 22, 23            | https://bugs.openjdk.org/browse/JDK-8317299 |
 | JDK-8317823 | 8                         | https://bugs.openjdk.org/browse/JDK-8317823 |
 | JDK-8317865 | 8                         | https://bugs.openjdk.org/browse/JDK-8317865 |
 | JDK-8316865 | 8                         | https://bugs.openjdk.org/browse/JDK-8316865 |
-| JDK-8316866 | 8,11                      | https://bugs.openjdk.org/browse/JDK-8316866 |
+| JDK-8316866 | 8, 11                     | https://bugs.openjdk.org/browse/JDK-8316866 |
 | JDK-8323686 | 11                        | https://bugs.openjdk.org/browse/JDK-8323686 |
 | JDK-8316952 | 8                         | https://bugs.openjdk.org/browse/JDK-8316952 |
 | JDK-8317301 | 8                         | https://bugs.openjdk.org/browse/JDK-8317301 |
 | JDK-8316939 | 8                         | https://bugs.openjdk.org/browse/JDK-8316939 |
-| JDK-8317578 | 8,11                      | https://bugs.openjdk.org/browse/JDK-8317578 |
+| JDK-8317578 | 8, 11                     | https://bugs.openjdk.org/browse/JDK-8317578 |
 | JDK-8317576 | 8                         | https://bugs.openjdk.org/browse/JDK-8317576 |
 | JDK-8317816 | 8                         | https://bugs.openjdk.org/browse/JDK-8317816 |
 | JDK-8316937 | 8                         | https://bugs.openjdk.org/browse/JDK-8316937 |
 | JDK-8316949 | 8                         | https://bugs.openjdk.org/browse/JDK-8316949 |
 | JDK-8317236 | 8                         | https://bugs.openjdk.org/browse/JDK-8317236 |
 | JDK-8317346 | 8                         | https://bugs.openjdk.org/browse/JDK-8317346 |
+| JDK-8324801 | 8                         | https://bugs.openjdk.org/browse/JDK-8324801 |
 
 ### OpenJ9 Bugs
 
@@ -229,10 +236,8 @@ Since unconfirmed bugs cannot be shown in Java Bug System(JBS), we only show the
 | Issue #18756 | https://github.com/eclipse-openj9/openj9/issues/18756 |
 | Issue #18765 | https://github.com/eclipse-openj9/openj9/issues/18765 |
 | Issue #18777 | https://github.com/eclipse-openj9/openj9/issues/18777 |
-
-
-
-
-
-
-
+| Issue #18919 | https://github.com/eclipse-openj9/openj9/issues/18919 |
+| Issue #18860 | https://github.com/eclipse-openj9/openj9/issues/18860 |
+| Issue #18836 | https://github.com/eclipse-openj9/openj9/issues/18836 |
+| Issue #18834 | https://github.com/eclipse-openj9/openj9/issues/18834 |
+| Issue #18955 | https://github.com/eclipse-openj9/openj9/issues/18955 |
